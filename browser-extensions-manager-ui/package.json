@@ -1,0 +1,27 @@
+{
+  "name": "browser-extensions-manager-ui",
+  "version": "1.0.0",
+  "description": "browser-extensions-manager-ui",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thelastmedici/browser-extensions-manager-ui.git"
+  },
+  "keywords": [
+    "browser",
+    "extension"
+  ],
+  "author": "christian & joshua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thelastmedici/browser-extensions-manager-ui/issues"
+  },
+  "homepage": "https://github.com/thelastmedici/browser-extensions-manager-ui#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.7",
+    "tailwindcss": "^4.1.7"
+  }
+}

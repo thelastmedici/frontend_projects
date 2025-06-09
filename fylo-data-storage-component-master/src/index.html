@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="output.">
+    <title>Fylo data storage component</title>
+  </head>
+
+<body class="bg-black text-white p-0 m-0 flex justify-center items-center flex-col h-screen">
+
+  <div class="bg-[url('../images/bg-mobile.png')] font-raleway w-[23rem]
+            md:bg-[hsl(229,_57%,_11%)]
+            md:bg-[url('../images/bg-desktop.png')]
+            md:bg-no-repeat
+            md:bg-[bottom_10px_left_-10px]
+            md:w-2xl md:flex md:items-center md:justify-between md:gap-4
+            lg:w-6xl h-[42rem]">
+
+    <div class=" w-[315px]  bg-[hsl(228,56%,26%)] mx-6 mt-30 rounded-tl-lg rounded-bl-lg rounded-br-lg rounded-tr-[120px] md:w-[220px] md:rounded-tr-[60px] md:h-[120px] md:mb-73 md:ml-20
+                 lg:w-[1200px] lg:h-[180px] lg:rounded-tl-lg lg:rounded-bl-lg lg:rounded-br-lg lg:rounded-tr-[120px] lg:ml-50">
+      <div class="py-10 mx-8 md:h-0.5 md:pt-5 lg:py-10">
+        <img src="../images/logo.svg"  alt="" srcset="" class=" md:w-20 lg:w-30">
+      </div>
+      <div class=" flex pl-8  gap-x-3  pb-9 lg:pt-5">
+        <div class="block  rounded-t-lg rounded-b-lg bg-[hsl(229,57%,11%)] p-3 ">
+          <img src="../images/icon-document.svg" alt="icon-document"  srcset="" class="md:w-4">
+        </div>
+        <div class="block  rounded-t-lg rounded-b-lg bg-[hsl(229,57%,11%)] p-3">
+          <img src="../images/icon-folder.svg" alt="icon-folder" srcset="" class="md:size-4.5">
+        </div>
+        <div class="block  rounded-t-lg rounded-b-lg bg-[hsl(229,57%,11%)] p-3">
+          <img src="../images/icon-upload.svg" alt="icon-upload" srcset="" class="md:size-4.5">
+        </div>
+      </div>
+    </div>
+
+    <div class="relative lower-card w-[315px] md:w-[200px]  lg:w-[400px] 
+                h-[150px] md:h-[110px] lg:h-[140px] lg:mr-40
+                 bg-[hsl(228,56%,26%)] mx-6 mt-5 md:mx-0
+                  rounded-tl-lg rounded-tr-lg 
+                rounded-bl-lg rounded-br-lg md:flex-1 
+                lg:flex-none md:top-[-90px] md:mr-15 lg:mt-13">
+        <div class="md:py-4 py-4">
+          <p class="text-sm md:text-[10px] lg:text-[12px]  text-center md:text-left md:mx-6 md:py-2 pt-2 pb-2">You’ve used <span class="font-bold">815 GB</span> of your storage</p>
+          <div class="relative w-[270px] md:w-[220px] lg:w-[330px] mx-5 h-5 bg-[hsl(229,55%,19%)] rounded-full overflow-hidden">
+            <div class="h-4 w-[75%]  top-0.5 left-0.5  bg-gradient-to-r from-pink-300 via-pink-500 to-fuchsia-600 rounded-full relative">
+              <div class="absolute right-2 top-1/2 transform -translate-y-1/2 translate-x-1/2 w-3 h-3 bg-white rounded-full shadow-md"></div>
+              </div>
+          </div>
+          <div class="flex lg:text-[12px] px-5 pt-2 text-xs md:text-[9px] font-bold text-white">
+            <div>0 GB</div>
+            <div class="ml-48  md:ml-40 lg:ml-63">1000 GB</div>
+          </div>
+        </div>
+
+            <div class="absolute inline-flex items-baseline space-x-1 bg-white px-5 py-3 md:-mt-38 md:ml-22   mx-5 ml-20
+                rounded-xl md:rounded-tl-xl md:rounded-tr-xl md:rounded-bl-xl md:rounded-br-none lg:ml-50
+                shadow-md">
+      
+            <span class="text-3xl font-bold text-[hsl(229,_57%,_11%)]">185</span>
+            <span class="text-xs text-gray-400 tracking-wider font-bold">GB LEFT</span>
+
+            <!-- Triangle Tail - only visible on md and up -->
+            <div class="hidden md:block absolute bottom-0 right-0 translate-y-full
+                        border-t-[14px] border-t-white 
+                        border-l-[14px] border-l-transparent 
+                        border-r-0 border-r-transparent"></div>
+          </div>
+
+
+         
+    </div>
+  </div>
+  <div class="attribution"> 
+    Coded by <a href="https://github.com/thelastmedici">thelastmedici</a>
+  </div>
+</body>
+</html>
