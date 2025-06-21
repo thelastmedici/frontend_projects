@@ -537,6 +537,11 @@
       margin-inline: calc(var(--spacing) * 60);
     }
   }
+  .lg\:mx-64 {
+    @media (width >= 64rem) {
+      margin-inline: calc(var(--spacing) * 64);
+    }
+  }
   .lg\:mx-72 {
     @media (width >= 64rem) {
       margin-inline: calc(var(--spacing) * 72);
@@ -600,6 +605,16 @@
   .lg\:px-0\.5 {
     @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 0.5);
+    }
+  }
+  .lg\:px-32 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 32);
+    }
+  }
+  .lg\:px-40 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 40);
     }
   }
   .lg\:px-56 {
