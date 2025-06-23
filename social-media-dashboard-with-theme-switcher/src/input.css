@@ -2,4 +2,17 @@
 @import "tailwindcss";
 @theme{
     --font-Inter: "Inter", sans-serif;
+    
+    --color-very-dark-blue-bg: hsl(230, 17%, 14%);
+    --color-very-dark-blue-top-bg: hsl(232, 19%, 15%);
+    --color-dark-desaturated-blue-card-bg: hsl(228, 28%, 20%);
+    --color-text-blue: hsl(228, 34%, 66%);
+    --color-text-white: sl(0, 0%, 100%)
+
+    --color-white-bg: hsl(0, 0%, 100%);
+    --color-very-pale-blue-tp-pattern: hsl(232, 19%, 15%);
+    --color-light-gray-blue-card-bg: hsl(227, 47%, 96%);
+    --color-dark-grayish-blue-text: hsl(228, 12%, 44%);
+    --color-very-blue-text: hsl(230, 17%, 14%)
+
 }
