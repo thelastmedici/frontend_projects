@@ -13,18 +13,24 @@
 </head>
 <body class="font-Inter m-0 p-0 box-border flex flex-col justify-center items-center">
 
-  <div class="font-Inter  bg-very-dark-blue-bg  text-white">
-    <nav>
-      <h1>Social Media Dashboard</h1>
-      <p>Total Followers: 23,004</p>
-      <hr class="">
+  <div class="font-Inter w-96  bg-very-dark-blue-bg  text-white">
+    <nav class="mt-10">
+      <h1 class="font-bold text-2xl mx-6 top-28">Social Media Dashboard</h1>
+      <p class="text-text-blue font-bold mx-6 mb-5">Total Followers: 23,004</p>
+      <div class="my-6 mx-5 border-t border-gray-600"></div>
+
       
-      <div class="toggle-div">
-        <p>Dark Mode</p>
-        <div class="toggle">
-           <div></div>
-        </div>
-      </div>
+      <label class=" mx-6 flex justify-between cursor-pointer">
+          <!-- Label -->
+          <span class="mr-3 text-text-blue font-bold">Dark Mode</span>
+
+          <!-- Switch -->
+            <div class="relative">
+              <input type="checkbox" id="dark-toggle" class="sr-only" />
+              <div class="block bg-gray-600 w-14 h-6 rounded-full"></div>
+              <div class="dot absolute left-1 top-0.5 bg-white w-5 h-5 rounded-full transition"></div>
+            </div>
+      </label>
     </nav>
 
     <div>
