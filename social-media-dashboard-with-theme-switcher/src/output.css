@@ -199,23 +199,8 @@
   .static {
     position: static;
   }
-  .-top-12 {
-    top: calc(var(--spacing) * -12);
-  }
   .top-0\.5 {
     top: calc(var(--spacing) * 0.5);
-  }
-  .top-1 {
-    top: calc(var(--spacing) * 1);
-  }
-  .top-1\.5 {
-    top: calc(var(--spacing) * 1.5);
-  }
-  .top-12 {
-    top: calc(var(--spacing) * 12);
-  }
-  .top-24 {
-    top: calc(var(--spacing) * 24);
   }
   .top-28 {
     top: calc(var(--spacing) * 28);
@@ -226,68 +211,17 @@
   .m-0 {
     margin: calc(var(--spacing) * 0);
   }
-  .mx-4 {
-    margin-inline: calc(var(--spacing) * 4);
-  }
   .mx-5 {
     margin-inline: calc(var(--spacing) * 5);
   }
   .mx-6 {
     margin-inline: calc(var(--spacing) * 6);
   }
-  .mx-9 {
-    margin-inline: calc(var(--spacing) * 9);
-  }
-  .mx-10 {
-    margin-inline: calc(var(--spacing) * 10);
-  }
-  .my-4 {
-    margin-block: calc(var(--spacing) * 4);
-  }
   .my-6 {
     margin-block: calc(var(--spacing) * 6);
   }
-  .my-28 {
-    margin-block: calc(var(--spacing) * 28);
-  }
-  .my-40 {
-    margin-block: calc(var(--spacing) * 40);
-  }
-  .my-44 {
-    margin-block: calc(var(--spacing) * 44);
-  }
-  .my-52 {
-    margin-block: calc(var(--spacing) * 52);
-  }
-  .-mt-40 {
-    margin-top: calc(var(--spacing) * -40);
-  }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
-  }
-  .mt-11 {
-    margin-top: calc(var(--spacing) * 11);
-  }
-  .mt-24 {
-    margin-top: calc(var(--spacing) * 24);
-  }
-  .mt-28 {
-    margin-top: calc(var(--spacing) * 28);
-  }
-  .mt-36 {
-    margin-top: calc(var(--spacing) * 36);
-  }
-  .mt-40 {
-    margin-top: calc(var(--spacing) * 40);
-  }
-  .mt-52 {
-    margin-top: calc(var(--spacing) * 52);
-  }
-  .mt-60 {
-    margin-top: calc(var(--spacing) * 60);
-  }
-  .mt-80 {
-    margin-top: calc(var(--spacing) * 80);
   }
   .mr-3 {
     margin-right: calc(var(--spacing) * 3);
@@ -310,32 +244,14 @@
   .table {
     display: table;
   }
-  .h-3 {
-    height: calc(var(--spacing) * 3);
-  }
-  .h-4 {
-    height: calc(var(--spacing) * 4);
-  }
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
-  .h-7 {
-    height: calc(var(--spacing) * 7);
-  }
-  .h-8 {
-    height: calc(var(--spacing) * 8);
-  }
-  .w-3 {
-    width: calc(var(--spacing) * 3);
-  }
   .w-5 {
     width: calc(var(--spacing) * 5);
-  }
-  .w-6 {
-    width: calc(var(--spacing) * 6);
   }
   .w-14 {
     width: calc(var(--spacing) * 14);
@@ -387,34 +303,9 @@
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
-  .text-4xl {
-    font-size: var(--text-4xl);
-    line-height: var(--tw-leading, var(--text-4xl--line-height));
-  }
-  .text-sm {
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
-  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
-  }
-  .font-medium {
-    --tw-font-weight: var(--font-weight-medium);
-    font-weight: var(--font-weight-medium);
-  }
-  .text-amber-50 {
-    color: var(--color-amber-50);
-  }
-  .text-amber-700 {
-    color: var(--color-amber-700);
-  }
-  .text-gray-300 {
-    color: var(--color-gray-300);
   }
   .text-text-blue {
     color: var(--color-text-blue);
@@ -431,12 +322,6 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
-  .text-shadow-text-blue {
-    --tw-text-shadow-color: hsl(228, 34%, 66%);
-    @supports (color: color-mix(in lab, red, red)) {
-      --tw-text-shadow-color: color-mix(in oklab, var(--color-text-blue) var(--tw-text-shadow-alpha), transparent);
-    }
-  }
 }
 @property --tw-border-style {
   syntax: "*";
@@ -452,23 +337,12 @@
   inherits: false;
   initial-value: solid;
 }
-@property --tw-text-shadow-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-text-shadow-alpha {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-outline-style: solid;
-      --tw-text-shadow-color: initial;
-      --tw-text-shadow-alpha: 100%;
     }
   }
 }
