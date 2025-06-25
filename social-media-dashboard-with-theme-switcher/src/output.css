@@ -22,6 +22,8 @@
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-6xl: 3.75rem;
+    --text-6xl--line-height: 1;
     --font-weight-medium: 500;
     --font-weight-bold: 700;
     --default-transition-duration: 150ms;
@@ -30,6 +32,7 @@
     --default-mono-font-family: var(--font-mono);
     --font-Inter: "Inter", sans-serif;
     --color-very-dark-blue-bg: hsl(230, 17%, 14%);
+    --color-very-dark-blue-top-bg: hsl(232, 19%, 15%);
     --color-text-blue: hsl(228, 34%, 66%);
   }
 }
@@ -220,6 +223,9 @@
   .my-6 {
     margin-block: calc(var(--spacing) * 6);
   }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
@@ -284,11 +290,17 @@
   .border-gray-600 {
     border-color: var(--color-gray-600);
   }
+  .bg-amber-700 {
+    background-color: var(--color-amber-700);
+  }
   .bg-gray-600 {
     background-color: var(--color-gray-600);
   }
   .bg-very-dark-blue-bg {
     background-color: var(--color-very-dark-blue-bg);
+  }
+  .bg-very-dark-blue-top-bg {
+    background-color: var(--color-very-dark-blue-top-bg);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -302,6 +314,14 @@
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-6xl {
+    font-size: var(--text-6xl);
+    line-height: var(--tw-leading, var(--text-6xl--line-height));
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
