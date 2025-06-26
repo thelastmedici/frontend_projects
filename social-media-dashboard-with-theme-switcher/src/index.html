@@ -25,11 +25,21 @@
           <span class="mr-3 text-text-blue font-bold">Dark Mode</span>
 
           <!-- Switch -->
-            <div class="relative">
+            <!-- <div class="relative">
               <input type="checkbox" id="dark-toggle" class="sr-only" />
               <div class="block bg-gray-600 w-14 h-6 rounded-full"></div>
-              <div class="dot absolute left-1 top-0.5 bg-white w-5 h-5 rounded-full transition"></div>
-            </div>
+              <div class="dot absolute left-1 top-0.5 bg-very-dark-blue-bg w-5 h-5 rounded-full transition"></div>
+            </div> -->
+
+            <!-- Toggle Switch -->
+          <label class="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" class="sr-only peer">
+              <div class="w-14 h-8 bg-gradient-to-r from-blue-500 to-green-400 rounded-full transition-all duration-300
+              peer-checked:bg-gray-300">
+              <div class="absolute left-1 top-1 bg-very-dark-blue-bg w-6 h-6 rounded-full transition-all duration-300
+                peer-checked:translate-x-6"></div>
+              </div>
+          </label>
       </label>
     </nav>
 
@@ -245,7 +255,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Christian Joshua</a>.
   </div>
 </body>
 </html>
