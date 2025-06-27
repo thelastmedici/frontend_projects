@@ -347,6 +347,12 @@
   .border-\[\#3b5998\] {
     border-color: #3b5998;
   }
+  .border-\[\#c72323\] {
+    border-color: #c72323;
+  }
+  .border-\[\#e77110\] {
+    border-color: #e77110;
+  }
   .border-gray-600 {
     border-color: var(--color-gray-600);
   }
