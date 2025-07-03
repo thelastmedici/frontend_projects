@@ -234,9 +234,6 @@
   .my-10 {
     margin-block: calc(var(--spacing) * 10);
   }
-  .mt-3 {
-    margin-top: calc(var(--spacing) * 3);
-  }
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
@@ -248,9 +245,6 @@
   }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
-  }
-  .mt-14 {
-    margin-top: calc(var(--spacing) * 14);
   }
   .mr-3 {
     margin-right: calc(var(--spacing) * 3);
@@ -287,6 +281,12 @@
   }
   .h-7 {
     height: calc(var(--spacing) * 7);
+  }
+  .h-36 {
+    height: calc(var(--spacing) * 36);
+  }
+  .h-40 {
+    height: calc(var(--spacing) * 40);
   }
   .min-h-screen {
     min-height: 100vh;
@@ -472,9 +472,19 @@
       margin-inline: calc(var(--spacing) * 64);
     }
   }
+  .lg\:mx-68 {
+    @media (width >= 64rem) {
+      margin-inline: calc(var(--spacing) * 68);
+    }
+  }
   .lg\:flex {
     @media (width >= 64rem) {
       display: flex;
+    }
+  }
+  .lg\:grid {
+    @media (width >= 64rem) {
+      display: grid;
     }
   }
   .lg\:hidden {
@@ -487,9 +497,9 @@
       width: 100vw;
     }
   }
-  .lg\:flex-row {
+  .lg\:grid-cols-4 {
     @media (width >= 64rem) {
-      flex-direction: row;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
   .lg\:content-between {
@@ -497,44 +507,14 @@
       align-content: space-between;
     }
   }
-  .lg\:justify-between {
-    @media (width >= 64rem) {
-      justify-content: space-between;
-    }
-  }
   .lg\:gap-0 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 0);
     }
   }
-  .lg\:gap-44 {
-    @media (width >= 64rem) {
-      gap: calc(var(--spacing) * 44);
-    }
-  }
-  .lg\:gap-96 {
-    @media (width >= 64rem) {
-      gap: calc(var(--spacing) * 96);
-    }
-  }
   .lg\:gap-\[40rem\] {
     @media (width >= 64rem) {
       gap: 40rem;
-    }
-  }
-  .lg\:gap-\[50rem\] {
-    @media (width >= 64rem) {
-      gap: 50rem;
-    }
-  }
-  .lg\:gap-\[96rem\] {
-    @media (width >= 64rem) {
-      gap: 96rem;
-    }
-  }
-  .lg\:gap-x-96 {
-    @media (width >= 64rem) {
-      column-gap: calc(var(--spacing) * 96);
     }
   }
   .lg\:px-14 {
