@@ -31,10 +31,10 @@
     --color-neutral-100: hsl(0, 0%, 93%);
     --color-neutral-600: hsl(226, 11%, 37%);
     --color-neutral-700: hsl(225, 23%, 24%);
-    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-sm: 24rem;
+    --container-md: 28rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-3xl: 1.875rem;
@@ -234,6 +234,9 @@
   .mx-3\.5 {
     margin-inline: calc(var(--spacing) * 3.5);
   }
+  .mx-auto {
+    margin-inline: auto;
+  }
   .my-8 {
     margin-block: calc(var(--spacing) * 8);
   }
@@ -278,6 +281,12 @@
   }
   .w-\[300px\] {
     width: 300px;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-md {
+    max-width: var(--container-md);
   }
   .max-w-sm {
     max-width: var(--container-sm);
@@ -333,9 +342,6 @@
   }
   .border-gray-400 {
     border-color: var(--color-gray-400);
-  }
-  .bg-black {
-    background-color: var(--color-black);
   }
   .bg-dark-gradient {
     background-color: var(--color-dark-gradient);
