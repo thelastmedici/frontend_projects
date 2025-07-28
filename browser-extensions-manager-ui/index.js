@@ -1,7 +1,15 @@
-document.addEventListener('DOMContentLoaded',()=>{
-    const toggle = document.getElementById('simpleToggle');
-    toggle.addEventListener('click', () =>{
-        toggle.classList.toggle('bg-red-500');
-        toggle.querySelector('.dot').classList.toggle('translate-x-6');
-    });
-});
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    const themeToggle = document.querySelector('.themeswitcher');
+    
+    themeToggle.addEventListener('click', ()=>{
+        const darkMode = document.body.classList.contains('bg-dark-gradient');
+        if (darkMode){
+            document.body.classList.remove('bg-dark-gradient');
+            document.body.classList.add('bg-white');
+        } else{
+             document.body.classList.remove('bg-white');
+            document.body.classList.add('bg-dark-gradient');
+        }
+    })
+})
