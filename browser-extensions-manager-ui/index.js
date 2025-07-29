@@ -6,15 +6,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
     themeToggle.addEventListener('click', ()=>{
         const darkMode = document.body.classList.contains('bg-dark-gradient');
         const extList = document.querySelector('.extension-list');
+        const logoImg = document.getElementById('logo-img');
         if (darkMode){
             document.body.classList.remove('bg-dark-gradient');
             document.body.classList.add('bg-white');
-            extList.classList.add('text-black')
+            extList.classList.add('text-black');
+            logoImg.src =logoImg.src = '../assets/images/extensions_logo_black_text.svg';
             
         } else{
              document.body.classList.remove('bg-white');
             document.body.classList.add('bg-dark-gradient');
-            extList.classList.remove('text-black')
+            extList.classList.remove('text-black');
+            logoImg.src = "../assets/images/logo.svg";
         }
-    })
+    });
 })
