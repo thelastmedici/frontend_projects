@@ -48,6 +48,7 @@
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-Noto-Sans: "Noto Sans", "sans-serif";
+    --color-light-gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
     --color-dark-gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
   }
 }
@@ -316,6 +317,9 @@
   }
   .bg-gray-300 {
     background-color: var(--color-gray-300);
+  }
+  .bg-light-gradient {
+    background-color: var(--color-light-gradient);
   }
   .bg-neutral-600 {
     background-color: var(--color-neutral-600);
