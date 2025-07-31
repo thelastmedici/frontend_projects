@@ -28,6 +28,8 @@
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-neutral-100: hsl(0, 0%, 93%);
+    --color-neutral-200: hsl(217, 61%, 90%);
+    --color-neutral-300: hsl(0, 0%, 78%);
     --color-neutral-600: hsl(226, 11%, 37%);
     --color-neutral-700: hsl(225, 23%, 24%);
     --color-black: #000;
@@ -320,6 +322,12 @@
   }
   .bg-light-gradient {
     background-color: var(--color-light-gradient);
+  }
+  .bg-neutral-200 {
+    background-color: var(--color-neutral-200);
+  }
+  .bg-neutral-300 {
+    background-color: var(--color-neutral-300);
   }
   .bg-neutral-600 {
     background-color: var(--color-neutral-600);

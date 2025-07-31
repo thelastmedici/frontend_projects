@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
             logoImg.src = '../assets/images/extensions_logo_black_text.svg';             
             themeLogo.src = '../assets/images/icon-moon.svg';   
             switchTheme.classList.remove('bg-neutral-700');
-            switchTheme.classList.add('bg-white');                   
+            switchTheme.classList.add('bg-white');
+            themeToggle.classList.remove('bg-neutral-600');
+            themeToggle.classList.add('bg-neutral-200')                   
         } else{             
             document.body.classList.remove('bg-light-gradient');             
             document.body.classList.add('bg-dark-gradient');             
@@ -25,7 +27,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
             logoImg.src = "../assets/images/logo.svg";             
             themeLogo.src = '../assets/images/icon-sun.svg';
             switchTheme.classList.add('bg-neutral-700');
-            switchTheme.classList.remove('bg-white');        
+            switchTheme.classList.remove('bg-white');
+            themeToggle.classList.add('bg-neutral-600');
+            themeToggle.classList.remove('bg-neutral-200')          
         }     
     }); 
 });
