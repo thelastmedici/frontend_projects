@@ -9,7 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const darkLogo = document.querySelector('.dark-logo');
             const extensionCards = document.querySelectorAll('.extension-card');
             const cardTitles = document.querySelectorAll('.font-semibold');
-            const cardDesc = document.querySelectorAll('.leading-snug')
+            const cardDesc = document.querySelectorAll('.leading-snug');
+            const removeBtn = document.querySelectorAll('.remove-btn');
+            const filterContainer = document.querySelector('.flex.gap-4');
+            const filterBtn = filterContainer.querySelectorAll('button'); 
             
             if (isDarkMode){
                 body.classList.remove('bg-dark-gradient', 'text-neutral-100');
@@ -19,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 darkLogo.src = '../assets/images/extensions_logo_black_text.svg';
 
                 themeToggle.classList.remove('bg-neutral-600')
-                themeToggle.classList.add('bg-neutral-300');
+                themeToggle.classList.add('bg-gray-200');
 
                 switcher.classList.remove('bg-neutral-700');
                 switcher.classList.add('bg-white', 'shadow-lg');
@@ -42,6 +45,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
 
+                removeBtn.forEach(btn => {
+                btn.classList.remove('text-white', 'border-gray-400', 'hover:bg-neutral-600');
+                btn.classList.add('text-gray-700', 'border-gray-300', 'hover:bg-gray-100');
+                });
+
+                filterBtn.forEach(btn =>{
+                    btn.classList.remove('bg-neutral-600', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-700', 'hover:bg-gray-300');
+                });
+
+
             } else {
                 body.classList.add('bg-dark-gradient', 'text-neutral-100');
                 body.classList.remove('bg-light-gradient', 'text-gray-900');
@@ -56,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
                 themeToggle.classList.add('bg-neutral-600')
-                themeToggle.classList.remove('bg-neutral-300');
+                themeToggle.classList.remove('bg-gray-200');
 
                 extensionCards.forEach(card => {
                     card.classList.remove('bg-white', 'shadow-lg', 'border', 'border-gray-200');
@@ -72,6 +86,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 cardDesc.forEach(desc =>{
                     desc.classList.add('text-gray-300');
                     desc.classList.remove('text-gray-500');
+                });
+
+                removeBtn.forEach(btn => {
+                btn.classList.add('text-white', 'border-gray-400', 'hover:bg-neutral-600');
+                btn.classList.remove('text-gray-700', 'border-gray-300', 'hover:bg-gray-100');
+                });
+
+
+                filterBtn.forEach(btn =>{
+                    btn.classList.add('bg-neutral-600', 'text-white');
+                    btn.classList.remove('bg-white', 'text-gray-700', 'hover:bg-gray-300');
                 });
             }
     })
