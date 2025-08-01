@@ -1,35 +1,34 @@
-document.addEventListener('DOMContentLoaded', ()=>{     
-    const themeToggle = document.querySelector('.themeswitcher');          
-    
-    themeToggle.addEventListener('click', ()=>{         
-        const darkMode = document.body.classList.contains('bg-dark-gradient');         
-        const extList = document.querySelector('.extension-list');         
-        const logoImg = document.getElementById('logo-img');         
-        const themeLogo = document.querySelector('.themeswitcher img');
-        const switchTheme = document.getElementById('switcher');
-        
-        
-                  
-        if (darkMode){             
-            document.body.classList.remove('bg-dark-gradient');             
-            document.body.classList.add('bg-light-gradient');             
-            extList.classList.add('text-black');             
-            logoImg.src = '../assets/images/extensions_logo_black_text.svg';             
-            themeLogo.src = '../assets/images/icon-moon.svg';   
-            switchTheme.classList.remove('bg-neutral-700');
-            switchTheme.classList.add('bg-white');
-            themeToggle.classList.remove('bg-neutral-600');
-            themeToggle.classList.add('bg-neutral-200')                   
-        } else{             
-            document.body.classList.remove('bg-light-gradient');             
-            document.body.classList.add('bg-dark-gradient');             
-            extList.classList.remove('text-black');             
-            logoImg.src = "../assets/images/logo.svg";             
-            themeLogo.src = '../assets/images/icon-sun.svg';
-            switchTheme.classList.add('bg-neutral-700');
-            switchTheme.classList.remove('bg-white');
-            themeToggle.classList.add('bg-neutral-600');
-            themeToggle.classList.remove('bg-neutral-200')          
-        }     
-    }); 
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.querySelector(".themeswitcher");
+
+
+    themeToggle.addEventListener('click', () => {
+            const body = document.body;
+            const isDarkMode = body.classList.contains('bg-dark-gradient');
+            const themeIcon = document.getElementById('theme-icon');
+            const switcher = document.getElementById('switcher');
+            
+            if (isDarkMode){
+                body.classList.remove('bg-dark-gradient', 'text-neutral-100');
+                body.classList.add('bg-light-gradient', 'text-gray-900');
+
+
+                themeIcon.src = '../assets/images/icon-moon.svg';
+
+                switcher.classList.remove('bg-neutral-700');
+                switcher.classList.add('bg-white', 'shadow-lg');
+
+            } else {
+                body.classList.add('bg-dark-gradient', 'text-neutral-100');
+                body.classList.remove('bg-light-gradient', 'text-gray-900');
+
+                themeIcon.src = '../assets/images/icon-sun.svg';
+
+
+                switcher.classList.add('bg-neutral-700');
+                switcher.classList.remove('bg-white', 'shadow-lg');
+            }
+    })
+
+
 });
