@@ -1,320 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extensions Dashboard</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="bg-dark-gradient from-neutral-900 to-neutral-800 text-neutral-100 font-sans min-h-screen">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="output.css">
-  
-  <title> Browser extensions manager UI</title>
-</head>
-<body class="bg-dark-gradient text-neutral-100 font-Noto-Sans lg:bg-dark-gradient lg:bg-no-repeat lg:bg-fixed min-h-screen dark">
+    <!-- Main Container -->
+    <div class="w-full max-w-7xl mx-auto px-4 lg:px-8 py-6 space-y-10">
 
-  <div class="flex flex-col items-center justify-center min-h-screen">
-    
-    <div class="bg-neutral-700 mt-4  w-[300px] max-w-sm rounded-xl flex items-center justify-between " id="switcher">
-      <div class="py-4 pl-3">
-          <img id="logo-img" class="dark-logo" src="../assets/images/logo.svg" alt="logo-image">
+      <!-- Switcher Bar -->
+      <div id="switcher" class="bg-neutral-700 rounded-xl flex items-center justify-between px-6 py-4">
+        <div>
+          <img class="dark-logo" src="../assets/images/logo.svg" alt="logo" />
+        </div>
+        <div class="bg-neutral-600 p-3 rounded-xl themeswitcher">
+          <img id="theme-icon" src="../assets/images/icon-sun.svg" alt="sun-icon" />
+        </div>
       </div>
-      <button class="bg-neutral-600  py-3 px-3 rounded-xl mr-3 themeswitcher">
-        <img id="theme-icon" src="../assets/images/icon-sun.svg" alt="sun-image">
-      </button>
+
+      <!-- Title and Filters -->
+      <div class="text-center space-y-4 lg:flex lg:justify-between">
+        <h1 class="text-3xl font-bold">Extensions List</h1>
+        <div class="flex justify-center gap-4 flex-wrap">
+          <button class="px-4 py-2 rounded-full bg-neutral-600">All</button>
+          <button class="px-4 py-2 rounded-full bg-neutral-600">Active</button>
+          <button class="px-4 py-2 rounded-full bg-neutral-600">Inactive</button>
+        </div>
+      </div>
+
+      <!-- Extensions Grid -->
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+        <!-- Extension Card Template -->
+        <!-- Repeat this block for each extension -->
+        <!-- You can replace names/logos/descriptions as needed -->
+
+        <!-- Extension Cards (12) -->
+        <!-- 1. DevLens -->
+        <!-- 2.  -->
+        <!-- 3.  -->
+        <!-- 4. JSONWizard -->
+        <!-- 5. CodeGuard -->
+        <!-- 6. PixelPerfect -->
+        <!-- 7. SEOPro -->
+        <!-- 8. GridGuru -->
+        <!-- 9. DOMSniffer -->
+        <!-- 10. BugZap -->
+        <!-- 11. FontBuddy -->
+        <!-- 12. AutoForm -->
+
+        <!-- Example Extension Block Start -->
+        <!-- Use this block 12 times with different data -->
+        <!-- Sample Extension Card -->
+        <!-- Copy/paste and change names/icons/descriptions -->
+
+        <!-- START extension loop -->
+        <!-- Example for loop in template logic (for illustration) -->
+        <!-- {% for ext in extensions %} -->
+
+        <!-- Card Structure -->
+        <!-- You will repeat this card block 12 times with unique content -->
+        <!-- For brevity, I'm only writing it once here -->
+
+        <!-- Copy and repeat this block for each extension -->
+        <div class="bg-neutral-700 rounded-2xl p-4 flex flex-col">
+          <div class="flex gap-4">
+            <img src="../assets/images/logo-devlens.svg" alt="DevLens logo" class="w-12 h-12" />
+            <div>
+              <h2 class="text-white font-semibold">DevLens</h2>
+              <p class="text-sm text-gray-300">Quickly inspect page layouts and visualize element boundaries.</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center mt-4">
+            <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">Remove</button>
+            <button class="w-12 h-6 bg-gray-300 rounded-full relative">
+              <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="bg-neutral-700 rounded-2xl p-4 flex flex-col">
+          <div class="flex gap-4">
+            <img src="../assets/images/logo-style-spy.svg" alt="StyleSpy" class="w-12 h-12" />
+            <div>
+              <h2 class="text-white font-semibold">StyleSpy</h2>
+              <p class="text-sm text-gray-300">Instantly analyze and copy CSS from any webpage element.</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center mt-4">
+            <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">Remove</button>
+            <button class="w-12 h-6 bg-gray-300 rounded-full relative">
+              <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="bg-neutral-700 rounded-2xl p-4 flex flex-col">
+          <div class="flex gap-4">
+            <img src="../assets/images/logo-speed-boost.svg" alt="SpeedBoost" class="w-12 h-12" />
+            <div>
+              <h2 class="text-white font-semibold">SpeedBoost</h2>
+              <p class="text-sm text-gray-300">Optimizes browser resource usage to accelerate page loading.</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center mt-4">
+            <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">Remove</button>
+            <button class="w-12 h-6 bg-gray-300 rounded-full relative">
+              <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="bg-neutral-700 rounded-2xl p-4 flex flex-col">
+          <div class="flex gap-4">
+            <img src="../assets/images/logo-json-wizard.svg" alt="JSONWizard logo" class="w-12 h-12" />
+            <div>
+              <h2 class="text-white font-semibold">JSONWizard</h2>
+              <p class="text-sm text-gray-300">Formats, validates, and prettifies JSON responses in-browser.</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center mt-4">
+            <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">Remove</button>
+            <button class="w-12 h-6 bg-gray-300 rounded-full relative">
+              <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="bg-neutral-700 rounded-2xl p-4 flex flex-col">
+          <div class="flex gap-4">
+            <img src="../assets/images/logo-tab-master-pro.svg" alt="DevLens logo" class="w-12 h-12" />
+            <div>
+              <h2 class="text-white font-semibold">TabMaster Pro.</h2>
+              <p class="text-sm text-gray-300">Organizes browser tabs into groups and sessions.</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center mt-4">
+            <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">Remove</button>
+            <button class="w-12 h-6 bg-gray-300 rounded-full relative">
+              <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="bg-neutral-700 rounded-2xl p-4 flex flex-col">
+          <div class="flex gap-4">
+            <img src="../assets/images/logo-viewport-buddy.svg" alt="viewport buddy" class="w-12 h-12" />
+            <div>
+              <h2 class="text-white font-semibold">ViewPort</h2>
+              <p class="text-sm text-gray-300">Simulates various screen resolutions directly within the browser.</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center mt-4">
+            <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">Remove</button>
+            <button class="w-12 h-6 bg-gray-300 rounded-full relative">
+              <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="bg-neutral-700 rounded-2xl p-4 flex flex-col">
+          <div class="flex gap-4">
+            <img src="../assets/images/logo-devlens.svg" alt="DevLens logo" class="w-12 h-12" />
+            <div>
+              <h2 class="text-white font-semibold">DevLens</h2>
+              <p class="text-sm text-gray-300">Quickly inspect page layouts and visualize element boundaries.</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center mt-4">
+            <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">Remove</button>
+            <button class="w-12 h-6 bg-gray-300 rounded-full relative">
+              <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="bg-neutral-700 rounded-2xl p-4 flex flex-col">
+          <div class="flex gap-4">
+            <img src="../assets/images/logo-devlens.svg" alt="DevLens logo" class="w-12 h-12" />
+            <div>
+              <h2 class="text-white font-semibold">DevLens</h2>
+              <p class="text-sm text-gray-300">Quickly inspect page layouts and visualize element boundaries.</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center mt-4">
+            <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">Remove</button>
+            <button class="w-12 h-6 bg-gray-300 rounded-full relative">
+              <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="bg-neutral-700 rounded-2xl p-4 flex flex-col">
+          <div class="flex gap-4">
+            <img src="../assets/images/logo-devlens.svg" alt="DevLens logo" class="w-12 h-12" />
+            <div>
+              <h2 class="text-white font-semibold">DevLens</h2>
+              <p class="text-sm text-gray-300">Quickly inspect page layouts and visualize element boundaries.</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center mt-4">
+            <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">Remove</button>
+            <button class="w-12 h-6 bg-gray-300 rounded-full relative">
+              <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="bg-neutral-700 rounded-2xl p-4 flex flex-col">
+          <div class="flex gap-4">
+            <img src="../assets/images/logo-devlens.svg" alt="DevLens logo" class="w-12 h-12" />
+            <div>
+              <h2 class="text-white font-semibold">DevLens</h2>
+              <p class="text-sm text-gray-300">Quickly inspect page layouts and visualize element boundaries.</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center mt-4">
+            <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">Remove</button>
+            <button class="w-12 h-6 bg-gray-300 rounded-full relative">
+              <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="bg-neutral-700 rounded-2xl p-4 flex flex-col">
+          <div class="flex gap-4">
+            <img src="../assets/images/logo-devlens.svg" alt="DevLens logo" class="w-12 h-12" />
+            <div>
+              <h2 class="text-white font-semibold">DevLens</h2>
+              <p class="text-sm text-gray-300">Quickly inspect page layouts and visualize element boundaries.</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center mt-4">
+            <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">Remove</button>
+            <button class="w-12 h-6 bg-gray-300 rounded-full relative">
+              <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="bg-neutral-700 rounded-2xl p-4 flex flex-col">
+          <div class="flex gap-4">
+            <img src="../assets/images/logo-devlens.svg" alt="DevLens logo" class="w-12 h-12" />
+            <div>
+              <h2 class="text-white font-semibold">DevLens</h2>
+              <p class="text-sm text-gray-300">Quickly inspect page layouts and visualize element boundaries.</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center mt-4">
+            <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">Remove</button>
+            <button class="w-12 h-6 bg-gray-300 rounded-full relative">
+              <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Repeat similar blocks for the other 11 extensions -->
+
+        <!-- END extension loop -->
+
+      </div>
+
     </div>
 
-    <div class="flex flex-col items-center justify-center my-8">
-      <p class="font-bold text-3xl font-Noto-Sans mb-4 extension-list">Extensions List</p>
-      <div class="flex gap-4">
-      <button class="px-4 py-2 rounded-full bg-neutral-600"><p>All</p></button>
-      <button class="px-4 py-2 rounded-full bg-neutral-600"><p>Active</p></button>
-      <button class="px-4 py-2 rounded-full bg-neutral-600"><p>Inactive</p></button>
-      </div>
-    </div>
-    <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
-      <div class="flex flex-col space-y-4">
-
-        <div class="extension-card bg-neutral-700 mx-3.5 flex flex-col rounded-2xl p-4 w-[300px] ">
-          <!--Icon + text-->
-            <div class="flex space-x-4 items-start max-h-25">
-              <div class="w-30 h-30">
-                <img src="../assets/images/logo-devlens.svg" alt="logo-devlens">
-              </div>
-              <div class="flex flex-col">
-                <h1 class="font-Noto-Sans text-white font-semibold ">DevLens</h1>
-                <p class="text-sm text-gray-300 leading-snug">Quickly inspect page layouts and visualize element boundaries.</p>
-              </div>
-            </div>
-        
-          <!--Remove btn + toggle-->
-            <div class="flex justify-between items-center">
-              <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">
-                  Remove
-              </button>
-              <button id="simpleToggle" class="w-12 h-6 bg-gray-300 rounded-full relative focus:outline-none">
-                    <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
-              </button>
-            </div>
-        </div>
-
-          <div class="extension-card bg-neutral-700 mx-3.5 flex flex-col rounded-2xl p-4 w-[300px]">
-          <!--Icon + text-->
-            <div class="flex space-x-4 items-start max-h-25">
-              <div class="w-30 h-30">
-                <img src="../assets/images/logo-style-spy.svg" alt="logo-stylespy">
-              </div>
-              <div class="flex flex-col">
-                <h1 class="font-Noto-Sans text-white font-semibold ">StyleSpy</h1>
-                <p class="text-sm text-gray-300 leading-snug"> Instantly analyze and copy CSS from any webpage element.</p>
-              </div>
-            </div>
-        
-          <!--Remove btn + toggle-->
-            <div class="flex justify-between items-center">
-              <button class="remove-btntext-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">
-                  Remove
-              </button>
-              <button id="simpleToggle" class="w-12 h-6 bg-gray-300 rounded-full relative focus:outline-none">
-                    <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
-              </button>
-            </div>
-        </div>
-          <div class="extension-card bg-neutral-700 mx-3.5 flex flex-col rounded-2xl p-4 w-[300px]">
-          <!--Icon + text-->
-            <div class="flex space-x-4 items-start max-h-25">
-              <div class="w-30 h-30">
-                <img src="../assets/images/logo-speed-boost.svg" alt="logo-speed-boost">
-              </div>
-              <div class="flex flex-col">
-                <h1 class="font-Noto-Sans text-white font-semibold ">SpeedBoost</h1>
-                <p class="text-sm text-gray-300   leading-snug">Optimizes browser resource usage to accelerate page loading.</p>
-              </div>
-            </div>
-        
-          <!--Remove btn + toggle-->
-            <div class="flex justify-between items-center">
-              <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">
-                  Remove
-              </button>
-              <button id="simpleToggle" class="w-12 h-6 bg-gray-300 rounded-full relative focus:outline-none">
-                    <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
-              </button>
-            </div>
-        </div>
-
-          <div class="extension-card bg-neutral-700 mx-3.5 flex flex-col rounded-2xl p-4 w-[300px]">
-          <!--Icon + text-->
-            <div class="flex space-x-4 items-start max-h-25">
-              <div class="w-30 h-30">
-                <img src="../assets/images/logo-json-wizard.svg" alt="logo-json-wizard">
-              </div>
-              <div class="flex flex-col">
-                <h1 class="font-Noto-Sans text-white font-semibold ">JSONWizard</h1>
-                <p class="text-sm text-gray-300 leading-snug">Formats, validates, and prettifies JSON responses in-browser.</p>
-              </div>
-            </div>
-        
-          <!--Remove btn + toggle-->
-            <div class="flex justify-between items-center">
-              <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">
-                  Remove
-              </button>
-              <button id="simpleToggle" class="w-12 h-6 bg-gray-300 rounded-full relative focus:outline-none">
-                    <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
-              </button>
-            </div>
-        </div>
-
-          <div class="extension-card bg-neutral-700 mx-3.5 flex flex-col rounded-2xl p-4 w-[300px]">
-          <!--Icon + text-->
-            <div class="flex space-x-4 items-start max-h-25">
-              <div class="w-30 h-30">
-                <img src="../assets/images/logo-tab-master-pro.svg" alt="logo-tab-master-pro">
-              </div>
-              <div class="flex flex-col">
-                <h1 class="font-Noto-Sans text-white font-semibold ">TabMaster Pro</h1>
-                <p class="text-sm text-gray-300 leading-snug">Organizes browser tabs into groups and sessions.</p>
-              </div>
-            </div>
-        
-          <!--Remove btn + toggle-->
-            <div class="flex justify-between items-center">
-              <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">
-                  Remove
-              </button>
-              <button id="simpleToggle" class="w-12 h-6 bg-gray-300 rounded-full relative focus:outline-none">
-                    <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
-              </button>
-            </div>
-        </div>
-
-          <div class="extension-card bg-neutral-700 mx-3.5 flex flex-col rounded-2xl p-4 w-[300px]">
-          <!--Icon + text-->
-            <div class="flex space-x-4 items-start max-h-25">
-              <div class="w-30 h-30">
-                <img src="../assets/images/logo-viewport-buddy.svg" alt="logo-viewport-buddy">
-              </div>
-              <div class="flex flex-col">
-                <h1 class="font-Noto-Sans text-white font-semibold ">ViewportBuddy</h1>
-                <p class="text-sm text-gray-300 leading-snug">Simulates various screen resolutions directly within the browser.</p>
-              </div>
-            </div>
-        
-          <!--Remove btn + toggle-->
-            <div class="flex justify-between items-center">
-              <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">
-                  Remove
-              </button>
-              <button id="simpleToggle" class="w-12 h-6 bg-gray-300 rounded-full relative focus:outline-none">
-                    <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
-              </button>
-            </div>
-        </div>
-          <div class="extension-card bg-neutral-700 mx-3.5 flex flex-col rounded-2xl p-4 w-[300px]">
-          <!--Icon + text-->
-            <div class="flex space-x-4 items-start max-h-25">
-              <div class="w-30 h-30">
-                <img src="../assets/images/logo-markup-notes.svg" alt="logo-markup-notes">
-              </div>
-              <div class="flex flex-col">
-                <h1 class="font-Noto-Sans text-white font-semibold ">Markup Notes</h1>
-                <p class="text-sm text-gray-300  leading-snug">Enables annotation and notes directly onto webpages for collaborative debugging.</p>
-              </div>
-            </div>
-        
-          <!--Remove btn + toggle-->
-            <div class="flex justify-between items-center">
-              <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">
-                  Remove
-              </button>
-              <button id="simpleToggle" class="w-12 h-6 bg-gray-300 rounded-full relative focus:outline-none">
-                    <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
-              </button>
-            </div>
-        </div>
-          <div class="extension-card bg-neutral-700 mx-3.5 flex flex-col rounded-2xl p-4 w-[300px]">
-          <!--Icon + text-->
-            <div class="flex space-x-4 items-start max-h-25">
-              <div class="w-30 h-30">
-                <img src="../assets/images/logo-grid-guides.svg" alt="logo-grid-guides">
-              </div>
-              <div class="flex flex-col">
-                <h1 class="font-Noto-Sans text-white font-semibold ">GridGuides</h1>
-                <p class="text-sm text-gray-300 leading-snug">Overlay customizable grids and alignment guides on any webpage.</p>
-              </div>
-            </div>
-        
-          <!--Remove btn + toggle-->
-            <div class="flex justify-between items-center">
-              <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">
-                  Remove
-              </button>
-              <button id="simpleToggle" class="w-12 h-6 bg-gray-300 rounded-full relative focus:outline-none">
-                    <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
-              </button>
-            </div>
-        </div>
-          <div class="extension-card bg-neutral-700 mx-3.5 flex flex-col rounded-2xl p-4 w-[300px]">
-          <!--Icon + text-->
-            <div class="flex space-x-4 items-start max-h-25">
-              <div class="w-30 h-30">
-                <img src="../assets/images/logo-palette-picker.svg" alt="logo-palette-picker">
-              </div>
-              <div class="flex flex-col">
-                <h1 class="font-Noto-Sans text-white font-semibold ">Palette Picker</h1>
-                <p class="text-sm text-gray-300 leading-snug">Instantly extracts color palettes from any webpage.</p>
-              </div>
-            </div>
-        
-          <!--Remove btn + toggle-->
-            <div class="flex justify-between items-center">
-              <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">
-                  Remove
-              </button>
-              <button id="simpleToggle" class="w-12 h-6 bg-gray-300 rounded-full relative focus:outline-none">
-                    <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
-              </button>
-            </div>
-        </div>
-          <div class="extension-card bg-neutral-700 mx-3.5 flex flex-col rounded-2xl p-4 w-[300px]">
-          <!--Icon + text-->
-            <div class="flex space-x-4 items-start max-h-25">
-              <div class="w-30 h-30">
-                <img src="../assets/images/logo-link-checker.svg" alt="LinkChecker">
-              </div>
-              <div class="flex flex-col">
-                <h1 class="font-Noto-Sans text-white  font-semibold ">LinkChecker</h1>
-                <p class="text-sm text-gray-300 leading-snug">Scans and highlights broken links on any page.</p>
-              </div>
-            </div>
-        
-          <!--Remove btn + toggle-->
-            <div class="flex justify-between items-center">
-              <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">
-                  Remove
-              </button>
-              <button id="simpleToggle" class="w-12 h-6 bg-gray-300 rounded-full relative focus:outline-none">
-                    <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
-              </button>
-            </div>
-        </div>
-
-          <div class="extension-card bg-neutral-700 mx-3.5 flex flex-col rounded-2xl p-4 w-[300px]">
-          <!--Icon + text-->
-            <div class="flex space-x-4 items-start max-h-25">
-              <div class="w-30 h-30">
-                <img src="../assets/images/logo-dom-snapshot.svg" alt="logo-dom-snapshot">
-              </div>
-              <div class="flex flex-col">
-                <h1 class="font-Noto-Sans text-white font-semibold ">DOM Snapshot</h1>
-                <p class="text-sm text-gray-300 leading-snug">Capture and export DOM structures quickly.</p>
-              </div>
-            </div>
-        
-          <!--Remove btn + toggle-->
-            <div class="flex justify-between items-center">
-              <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">
-                  Remove
-              </button>
-              <button id="simpleToggle" class="w-12 h-6 bg-gray-300 rounded-full relative focus:outline-none">
-                    <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
-              </button>
-            </div>
-        </div>
-          <div class="extension-card bg-neutral-700 mx-3.5 flex flex-col rounded-2xl p-4 w-[300px]">
-          <!--Icon + text-->
-            <div class="flex space-x-4 items-start max-h-25">
-              <div class="w-30 h-30">
-                <img src="../assets/images/logo-console-plus.svg" alt="logo-console-plus">
-              </div>
-              <div class="flex flex-col">
-                <h1 class="font-Noto-Sans text-white font-semibold ">ConsolePlus</h1>
-                <p class="text-sm text-gray-300 leading-snug">Enhanced developer console with advanced filtering and logging.</p>
-              </div>
-            </div>
-        
-          <!--Remove btn + toggle-->
-            <div class="flex justify-between items-center">
-              <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">
-                  Remove
-              </button>
-              <button id="simpleToggle" class="w-12 h-6 bg-gray-300 rounded-full relative focus:outline-none">
-                    <span class="dot absolute left-0 top-0 h-6 w-6 bg-white rounded-full transition-transform duration-300"></span>
-              </button>
-            </div>
-        </div>
-      </div>
-
-      
-        
-  </div>
-
-  
-    
-  </div>
-
-  <div class="flex items-center justify-center"> 
-    Coded by <a href="https://github.com/thelastmedici"> Christian & Joshua</a>.
-  </div>
-  <script src="../index.js"></script>
-</body>
+    <script src="../index.js"></script>
+  </body>
 </html>
