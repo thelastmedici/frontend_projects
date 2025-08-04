@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const cardDesc = document.querySelectorAll('.leading-snug');
             const removeBtn = document.querySelectorAll('.remove-btn');
             const filterContainer = document.querySelector('.flex.gap-4');
-            const filterBtn = filterContainer.querySelectorAll('button'); 
+            const filterBtn = filterContainer.querySelectorAll('button');
+            const pText = document.querySelectorAll('.text-sm .text-gray-300');
             
             if (isDarkMode){
                 body.classList.remove('bg-dark-gradient', 'text-neutral-100');
@@ -30,6 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 extensionCards.forEach(card => {
                     card.classList.remove('bg-neutral-700');
                     card.classList.add('bg-white', 'shadow-lg', 'border', 'border-gray-200');
+                });
+
+                pText.forEach(text => {
+                    text.classList.remove('text-gray-300');
+                    text.classList.add('text-blue-950')
+
                 });
 
 
@@ -76,6 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     card.classList.remove('bg-white', 'shadow-lg', 'border', 'border-gray-200');
                     card.classList.add('bg-neutral-700');
                 });
+                
+                pText.forEach(text => {
+                    text.classList.add('text-gray-300');
+                    text.classList.remove('text-blue-950')
+
+                })
 
                 cardTitles.forEach(title =>{
                     title.classList.remove('text-blue-950');
