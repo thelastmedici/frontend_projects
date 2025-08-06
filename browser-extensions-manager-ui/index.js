@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.querySelector(".themeswitcher");
-    const toogle = document.querySelectorAll('.extension-card .dot');
+    const switchBtn = document.querySelectorAll('.extension-card .switch-button');
 
     themeToggle.addEventListener('click', () => {
             const body = document.body;
@@ -115,10 +115,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
     });
 
-    toogle.forEach(button =>{
-        button.addEventListener('click', ()=> {
-            button.classList.toggle('translate-x-6');
-        })
-        
-    })
+    switchBtn.forEach(switchBtn => {
+    switchBtn.addEventListener('click', () => {
+        const dot = switchBtn.querySelector('.dot');
+
+        dot.classList.toggle('translate-x-6');
+        switchBtn.classList.toggle('bg-red-400');
+        switchBtn.classList.toggle('bg-gray-300');
+    });
+});
+
 });
