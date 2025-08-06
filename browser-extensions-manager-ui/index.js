@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.querySelector(".themeswitcher");
+    const toogle = document.querySelectorAll('.extension-card .dot');
 
     themeToggle.addEventListener('click', () => {
             const body = document.body;
@@ -112,5 +113,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.classList.remove('bg-white', 'text-gray-700', 'hover:bg-gray-300');
                 });
             }
+    });
+
+    toogle.forEach(button =>{
+        button.addEventListener('click', ()=> {
+            button.classList.toggle('translate-x-6');
+        })
+        
     })
 });
