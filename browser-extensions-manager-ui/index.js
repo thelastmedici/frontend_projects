@@ -118,11 +118,20 @@ document.addEventListener('DOMContentLoaded', () => {
     switchBtn.forEach(switchBtn => {
     switchBtn.addEventListener('click', () => {
         const dot = switchBtn.querySelector('.dot');
-
         dot.classList.toggle('translate-x-6');
         switchBtn.classList.toggle('bg-red-400');
         switchBtn.classList.toggle('bg-gray-300');
     });
 });
+
+ async function loadExtension(){
+    try {
+        const response = await fetch('./data.json');
+        const data = response.json()
+        
+    } catch (error) {
+        console.error('Failed to load data:', error);
+    }
+ }
 
 });
