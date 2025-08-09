@@ -1,5 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.querySelector(".themeswitcher");
+    const extList = document.querySelectorAll(".px-4.py-2.rounded-full");
+    extList.forEach(ext => {
+        ext.addEventListener('click', ()=>{
+           extList.forEach(btn => btn.classList.remove('bg-red-500'));
+           ext.classList.toggle('bg-red-500');
+           ext.classList.toggle("bg-neutral-600");
+        });
+    });
 
     // Theme toggle functionality
     themeToggle.addEventListener('click', () => {
