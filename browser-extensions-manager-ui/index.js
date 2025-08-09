@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const filterContainer = document.querySelector('.flex.gap-4');
         const filterBtn = filterContainer.querySelectorAll('button');
         const pText = document.querySelectorAll('.text-sm .text-gray-300');
-        
+
         if (isDarkMode){
             body.classList.remove('bg-dark-gradient', 'text-neutral-100');
             body.classList.add('bg-light-gradient', 'text-gray-900');
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
-
+     
     // Load extensions data
     async function loadExtension() {
         try {
@@ -117,21 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return data;
         } catch (error) {
             console.error("Failed to load data:", error);
-            // Fallback data for testing (remove this once you have the JSON file working)
-            // return [
-            //     {
-            //         "name": "DevLens",
-            //         "logo": "./assets/images/logo-devlens.svg",
-            //         "description": "Quickly inspect page layouts and visualize element boundaries.",
-            //         "isActive": true
-            //     },
-            //     {
-            //         "name": "StyleSpy",
-            //         "logo": "./assets/images/logo-style-spy.svg",
-            //         "description": "Instantly analyze and copy CSS from any webpage element.",
-            //         "isActive": false
-            //     }
-            // ];
         }
     }
 
@@ -150,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         extensions.forEach(extension => {
             const card = document.createElement('div');
-            card.className = 'extension-card bg-neutral-700 rounded-2xl p-4 flex flex-col';
+            card.className = 'extension-card bg-neutral-700 rounded-2xl p-4 flex flex-col transition-colors duration-300';
             
             card.innerHTML = `
                 <div class="flex gap-4">
@@ -162,22 +147,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="flex justify-between items-center mt-4">
                     <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">Remove</button>
-                    <button class="switch-button w-12 h-6 bg-${extension.isActive ? 'red-400' : 'gray-300'} rounded-full relative">
+                    <button class="switch-button w-12 h-6 ${extension.isActive ? 'bg-red-400' : 'bg-gray-300'} rounded-full relative">
                         <span class="dot absolute top-0 left-0 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${extension.isActive ? 'translate-x-6' : ''}"></span>
                     </button>
                 </div>
             `;
             
             container.appendChild(card);
-        });
 
-        // Add event listeners to newly created switch buttons
-        document.querySelectorAll('.extension-card .switch-button').forEach(switchBtn => {
+            // Switch button toggle
+            const switchBtn = card.querySelector('.switch-button');
+            const dot = switchBtn.querySelector('.dot');
             switchBtn.addEventListener('click', () => {
-                const dot = switchBtn.querySelector('.dot');
                 dot.classList.toggle('translate-x-6');
                 switchBtn.classList.toggle('bg-red-400');
                 switchBtn.classList.toggle('bg-gray-300');
+            });
+
+            // Remove button toggle background
+            const removeBtn = card.querySelector('.remove-btn');
+            removeBtn.addEventListener('click', () => {
+                removeBtn.classList.toggle('bg-red-500');
+                removeBtn.classList.toggle('text-white');
             });
         });
     }
