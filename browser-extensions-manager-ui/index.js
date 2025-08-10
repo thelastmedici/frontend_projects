@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'Active':
                 filteredExtensions = allExtensions.filter(ext => ext.isActive === true);
                 break;
-            case 'inactive':
-                filteredExtension = allExtensions.filter(ext=>ext.isActive === false);
+            case 'Inactive':
+                filteredExtensions = allExtensions.filter(ext=>ext.isActive === false);
                 break;
             default:
                 filteredExtensions = allExtensions;
@@ -35,6 +35,64 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         renderFilteredExtensions(filteredExtensions);
     }
+    //filtered extension function
+
+    function renderFilteredExtensions(extensions) {
+        const container = document.getElementById('extensions-container');
+        
+        if (!extensions || extensions.length === 0){
+            container.innerHTML = '<p class="col-span-full text-center text-gray-500">No extensions found for this filter.</p>';
+            return;
+        }
+
+        // Clear container
+        container.innerHTML = '';
+
+        extensions.forEach(extension => {
+            const card = document.createElement('div');
+            card.className = 'extension-card bg-neutral-700 rounded-2xl p-4 flex flex-col transition-colors duration-300';
+            card.dataset.isActive = extension.isActive; // Add data attribute
+            
+            card.innerHTML = `
+                <div class="flex gap-4">
+                    <img src="${extension.logo}" alt="${extension.name}" class="w-12 h-12" />
+                    <div>
+                        <h2 class="text-white font-semibold">${extension.name}</h2>
+                        <p class="text-sm text-gray-300 leading-snug">${extension.description}</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mt-4">
+                    <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-red-400 transition">Remove</button>
+                    <button class="switch-button w-12 h-6 ${extension.isActive ? 'bg-red-400' : 'bg-gray-300'} rounded-full relative">
+                        <span class="dot absolute top-0 left-0 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${extension.isActive ? 'translate-x-6' : ''}"></span>
+                    </button>
+                </div>
+            `;
+            
+            container.appendChild(card);
+
+            // Switch button toggle
+            const switchBtn = card.querySelector('.switch-button');
+            const dot = switchBtn.querySelector('.dot');
+            switchBtn.addEventListener('click', () => {
+                // Update the extension data
+                extension.isActive = !extension.isActive;
+                card.dataset.isActive = extension.isActive;
+                
+                dot.classList.toggle('translate-x-6');
+                switchBtn.classList.toggle('bg-red-400');
+                switchBtn.classList.toggle('bg-gray-300');
+            });
+
+            // Remove button toggle background
+            const removeBtn = card.querySelector('.remove-btn');
+            removeBtn.addEventListener('click', () => {
+                removeBtn.classList.toggle('bg-red-500');
+                removeBtn.classList.toggle('text-white');
+            });
+        });
+    }
+
     // Theme toggle functionality
     themeToggle.addEventListener('click', () => {
         const body = document.body;
@@ -157,6 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Render extensions
     async function renderExtension(){
         const extensions = await loadExtension();
+        allExtensions = extensions;
         const container = document.getElementById('extensions-container');
 
         if (!extensions || extensions.length === 0){
