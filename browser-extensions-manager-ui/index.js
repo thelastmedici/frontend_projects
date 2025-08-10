@@ -1,14 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.querySelector(".themeswitcher");
     const extList = document.querySelectorAll(".px-4.py-2.rounded-full");
+    
+    let allExtensions =[];
     extList.forEach(ext => {
         ext.addEventListener('click', ()=>{
            extList.forEach(btn => btn.classList.remove('bg-red-500'));
            ext.classList.toggle('bg-red-500');
            ext.classList.toggle("bg-neutral-600");
+
+           const buttonText = ext.textContent.trim();
+           filterExtension(buttonText);
         });
     });
+    
+    function filterExtension(filterType){
+        const container = document.getElementById('extensions-container');
 
+        let filteredExtensions;
+
+        switch(filterType){
+            case 'All':
+                filteredExtensions = allExtensions;
+                break;
+            case 'Active':
+                filteredExtensions = allExtensions.filter(ext => ext.isActive === true);
+                break;
+            case 'inactive':
+                filteredExtension = allExtensions.filter(ext=>ext.isActive === false);
+                break;
+            default:
+                filteredExtensions = allExtensions;
+            
+        }
+        renderFilteredExtensions(filteredExtensions);
+    }
     // Theme toggle functionality
     themeToggle.addEventListener('click', () => {
         const body = document.body;
@@ -154,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
                 <div class="flex justify-between items-center mt-4">
-                    <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-neutral-600 transition">Remove</button>
+                    <button class="remove-btn text-white border border-gray-400 rounded-full px-3 py-1 text-sm hover:bg-red-400 transition">Remove</button>
                     <button class="switch-button w-12 h-6 ${extension.isActive ? 'bg-red-400' : 'bg-gray-300'} rounded-full relative">
                         <span class="dot absolute top-0 left-0 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${extension.isActive ? 'translate-x-6' : ''}"></span>
                     </button>
