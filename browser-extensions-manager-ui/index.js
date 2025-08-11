@@ -112,8 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.remove('bg-dark-gradient', 'text-neutral-100');
             body.classList.add('bg-light-gradient', 'text-gray-900');
 
-            themeIcon.src = '../assets/images/icon-moon.svg';
-            darkLogo.src = '../assets/images/extensions_logo_black_text.svg';
+            themeIcon.src = './assets/images/icon-moon.svg';
+            darkLogo.src = './assets/images/extensions_logo_black_text.svg';
 
             themeToggle.classList.remove('bg-neutral-600')
             themeToggle.classList.add('bg-gray-200');
@@ -155,8 +155,8 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.add('bg-dark-gradient', 'text-neutral-100');
             body.classList.remove('bg-light-gradient', 'text-gray-900');
 
-            themeIcon.src = '../assets/images/icon-sun.svg';
-            darkLogo.src = '../assets/images/logo.svg';
+            themeIcon.src = './assets/images/icon-sun.svg';
+            darkLogo.src = './assets/images/logo.svg';
 
             switcher.classList.add('bg-neutral-700');
             switcher.classList.remove('bg-white', 'shadow-lg');

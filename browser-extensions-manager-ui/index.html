@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Extensions Dashboard</title>
-    <link rel="stylesheet" href="output.css" />
-  </head>
-  <body class="bg-dark-gradient from-neutral-900 to-neutral-800 text-neutral-100 font-sans min-h-screen">
-
+  
+    <link rel="stylesheet" href="./src/output.css" />
+</head>
+<body class="bg-dark-gradient from-neutral-900 to-neutral-800 text-neutral-100 font-sans min-h-screen">
+    
     <!-- Main Container -->
     <div class="w-full max-w-7xl mx-auto px-4 lg:px-8 py-6 space-y-10">
-
-      <!-- Switcher Bar -->
-      <div id="switcher" class="bg-neutral-700 rounded-xl flex items-center justify-between px-6 py-4">
-        <div>
-          <img class="dark-logo" src="../assets/images/logo.svg" alt="logo" />
-        </div>
-        <div class="bg-neutral-600 p-3 rounded-xl themeswitcher">
-          <img id="theme-icon" src="../assets/images/icon-sun.svg" alt="sun-icon" />
-        </div>
-      </div>
-      <!-- Title and Filters -->
-      <div class="text-center space-y-4 lg:flex lg:justify-between">
-        <h1 class="text-3xl font-bold">Extensions List</h1>
-        <div class="flex justify-center gap-4 flex-wrap">
-          <button class="px-4 py-2 rounded-full bg-neutral-600 hover:border-red-400 border-2">All</button>
-          <button class="px-4 py-2 rounded-full bg-neutral-600 hover:border-red-400 border-2">Active</button>
-          <button class="px-4 py-2 rounded-full bg-neutral-600 hover:border-red-400 border-2">Inactive</button>
-        </div>
-      </div>
-
-      <!-- Extensions Grid -->
-      <!-- <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" id="extensions-container"> -->
-          <div id="extensions-container" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              <!-- JS will inject cards here -->
+        
+        <!-- Switcher Bar -->
+        <div id="switcher" class="bg-neutral-700 rounded-xl flex items-center justify-between px-6 py-4">
+            <div>
+                
+                <img class="dark-logo" src="./assets/images/logo.svg" alt="logo" />
             </div>
-
+            <div class="bg-neutral-600 p-3 rounded-xl themeswitcher">
+                
+                <img id="theme-icon" src="./assets/images/icon-sun.svg" alt="sun-icon" />
+            </div>
+        </div>
+        
+        
+        <div class="text-center space-y-4 lg:flex lg:justify-between">
+            <h1 class="text-3xl font-bold">Extensions List</h1>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <button class="px-4 py-2 rounded-full bg-neutral-600 hover:border-red-400 border-2">All</button>
+                <button class="px-4 py-2 rounded-full bg-neutral-600 hover:border-red-400 border-2">Active</button>
+                <button class="px-4 py-2 rounded-full bg-neutral-600 hover:border-red-400 border-2">Inactive</button>
+            </div>
+        </div>
+        
+        
+        <div id="extensions-container" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <!-- JS will inject cards here -->
+        </div>
+        
     </div>
-
-
-      <div class="attribution flex justify-center items-center mx-auto">
+    
+    <div class="attribution flex justify-center items-center mx-auto">
         <p>
-          Coded by
-          <a href="https://github.com/thelastmedici" class="ml-1 underliness"
-            >Christian Joshua</a
-          >.
+            Coded by
+            <a href="https://github.com/thelastmedici" class="ml-1 underline">Christian Joshua</a>.
         </p>
-      </div>
-
-    <script src="../index.js"></script>
-  </body>
+    </div>
+    
+    <!-- Fixed script path -->
+    <script src="./index.js"></script>
+</body>
 </html>
