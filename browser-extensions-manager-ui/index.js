@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load extensions data
     async function loadExtension() {
         try {
-            const response = await fetch('./data.json');
+            const response = await fetch('./src/data.json');
             
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
