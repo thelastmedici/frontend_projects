@@ -245,9 +245,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     </button>
                 </div>
             `;
-            
-            container.appendChild(card);
 
+
+            container.appendChild(card);
             // Switch button toggle
             const switchBtn = card.querySelector('.switch-button');
             const dot = switchBtn.querySelector('.dot');
