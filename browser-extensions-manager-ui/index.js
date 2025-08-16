@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const extList = document.querySelectorAll(".px-4.py-2.rounded-full");
     
     let allExtensions =[];
+    
     extList.forEach(ext => {
         ext.addEventListener('click', ()=>{
            extList.forEach(btn => btn.classList.remove('bg-red-500'));
@@ -15,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     function filterExtension(filterType){
-        const container = document.getElementById('extensions-container');
 
         let filteredExtensions;
 
@@ -216,6 +216,8 @@ document.addEventListener('DOMContentLoaded', () => {
     async function renderExtension(){
         const extensions = await loadExtension();
         allExtensions = extensions;
+
+        console.log(allExtensions);
         const container = document.getElementById('extensions-container');
 
         if (!extensions || extensions.length === 0){
@@ -228,7 +230,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         extensions.forEach(extension => {
             const card = document.createElement('div');
-            card.className = 'extension-card bg-neutral-700 rounded-2xl p-4 flex flex-col transition-colors duration-300';
+            card.className = "extension-card bg-neutral-700 rounded-2xl p-4 flex flex-col transition-colors duration-300";
+            card.setAttribute("data-id", extension.name);
             
             card.innerHTML = `
                 <div class="flex gap-4">
@@ -245,8 +248,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     </button>
                 </div>
             `;
-
-
+           
+            card.dataset.id = extension.name;
             container.appendChild(card);
             // Switch button toggle
             const switchBtn = card.querySelector('.switch-button');
@@ -256,12 +259,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 switchBtn.classList.toggle('bg-red-400');
                 switchBtn.classList.toggle('bg-gray-300');
             });
-
+            
             // Remove button toggle background
             const removeBtn = card.querySelector('.remove-btn');
-            removeBtn.addEventListener('click', () => {
+            removeBtn.addEventListener('click', (event) => {
                 removeBtn.classList.toggle('bg-red-500');
-                removeBtn.classList.toggle('text-white');
+                const selectedCard = event.target.closest('.extension-card');
+                if(!selectedCard) return;
+                const cardId = selectedCard.dataset.id;
+                selectedCard.remove();
+                allExtensions=allExtensions.filter(ext => ext.name !== cardId);
+                renderFilteredExtensions(allExtensions);
+                
             });
         });
     }
