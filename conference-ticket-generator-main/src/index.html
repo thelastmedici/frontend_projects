@@ -10,67 +10,60 @@
   <title>Frontend Mentor | Conference ticket generator</title>
 
 </head>
-<body class="bg-[url(assets/images/background-mobile.png)]">
-  <!-- Form starts -->
-  <div>
-    <img src="../assets/images/logo-full.svg" alt="logo-full">
-  </div>
-
-  <div>
-    <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
-    <p>Secure your spot at next year's biggest coding conference.</p>
-  </div>
-
-  <div>
-    <p>Upload Avatar</p>
+<body class="bg-black text-white w-full">
+  <div class="max-w-sm mx-auto bg-[url('../assets/images/background-mobile.png')]">
+    <!-- Form starts -->
     <div>
-      <p>Drag and drop or click to upload</p>
+      <img src="../assets/images/logo-full.svg" alt="logo-full">
     </div>
-    <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
-  </div>
-  
-
-  <form action="">
-    <div class="fName">
-      <p>Full Name</p>
-      <input type="text" name="" id="">
+    <div>
+      <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <p>Secure your spot at next year's biggest coding conference.</p>
+    </div>
+    <div>
+      <p>Upload Avatar</p>
+      <div>
+        <p>Drag and drop or click to upload</p>
+      </div>
+      <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
     </div>
     
-    <div>
-      <p>Email Address</p>
-      <input type="text" placeholder="example@email.com">
-    </div>
+    <form action="">
+      <div class="fName">
+        <p>Full Name</p>
+        <input type="text" name="" id="">
+      </div>
     
-    <div>
-      <p>GitHub Username</p>
-      <input type="text" name="" id="" placeholder="@yourusername"></input>
+      <div>
+        <p>Email Address</p>
+        <input type="text" placeholder="example@email.com">
+      </div>
+    
+      <div>
+        <p>GitHub Username</p>
+        <input type="text" name="" id="" placeholder="@yourusername"></input>
+      </div>
+      <button>
+        <p>Generate My Ticket</p>
+      </button>
+    </form>
+    <!-- Form ends -->
+    <!-- Generated tickets starts -->
+    <div class="hidden">
+    
+      <p>Congrats, <!-- Full Name -->! Your ticket is ready.</p>
+    
+      <p>We've emailed your ticket to  and will send updates in the run up to the event.</p>
+    
+      Coding Conf
+      Jan 31, 2025 / Austin, TX
     </div>
-
-    <button>
-      <p>Generate My Ticket</p>
-    </button>
-  </form>
-
-  
-
-  <!-- Form ends -->
-
-  <!-- Generated tickets starts -->
-<div class="hidden">
-  
-    <p>Congrats, <!-- Full Name -->! Your ticket is ready.</p>
-  
-    <p>We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.</p>
-  
-    Coding Conf
-    Jan 31, 2025 / Austin, TX
-</div>
-
-  <!-- Generated tickets ends -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="github.com/thelastmedici.com">Christian & Joshua</a>.
+    <!-- Generated tickets ends -->
+    
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="github.com/thelastmedici.com">Christian & Joshua</a>.
+    </div>
   </div>
 </body>
 </html>

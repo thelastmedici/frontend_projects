@@ -31,12 +31,12 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-300: oklch(87.9% 0.169 91.605);
-    --font-weight-bold: 700;
-    --font-weight-extrabold: 800;
+    --color-black: #000;
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --container-sm: 24rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --font-Inconsolata: Inconsolata, monospace;
   }
 }
 @layer base {
@@ -188,27 +188,36 @@
   .static {
     position: static;
   }
-  .bg-amber-300 {
-    background-color: var(--color-amber-300);
+  .mx-auto {
+    margin-inline: auto;
   }
-  .font-Inconsolata {
-    font-family: var(--font-Inconsolata);
+  .hidden {
+    display: none;
   }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
+  .w-full {
+    width: 100%;
   }
-  .font-extrabold {
-    --tw-font-weight: var(--font-weight-extrabold);
-    font-weight: var(--font-weight-extrabold);
+  .max-w-sm {
+    max-width: var(--container-sm);
+  }
+  .bg-black {
+    background-color: var(--color-black);
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .bg-\[url\(\'\.\.\/assets\/images\/background-mobile\.png\'\)\] {
+    background-image: url('../assets/images/background-mobile.png');
+  }
+  .bg-\[url\(assets\/images\/background-mobile\.png\)\] {
+    background-image: url(assets/images/background-mobile.png);
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
-}
-@property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
 }
 @property --tw-blur {
   syntax: "*";
@@ -266,7 +275,6 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-font-weight: initial;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;
