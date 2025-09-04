@@ -32,7 +32,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-blue-500: oklch(62.3% 0.214 259.815);
-    --color-purple-950: oklch(29.1% 0.149 302.717);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
@@ -42,7 +41,6 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
-    --container-3xs: 16rem;
     --container-sm: 24rem;
     --container-3xl: 48rem;
     --text-sm: 0.875rem;
@@ -241,11 +239,11 @@
   .hidden {
     display: none;
   }
+  .h-fit {
+    height: fit-content;
+  }
   .w-3xl {
     width: var(--container-3xl);
-  }
-  .w-3xs {
-    width: var(--container-3xs);
   }
   .w-full {
     width: 100%;
@@ -269,14 +267,6 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-2 {
-    border-style: var(--tw-border-style);
-    border-width: 2px;
-  }
-  .border-dashed {
-    --tw-border-style: dashed;
-    border-style: dashed;
-  }
   .border-gray-300 {
     border-color: var(--color-gray-300);
   }
@@ -285,9 +275,6 @@
   }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
-  }
-  .bg-purple-950 {
-    background-color: var(--color-purple-950);
   }
   .bg-\[url\(\'\.\.\/assets\/images\/background-mobile\.png\'\)\] {
     background-image: url('../assets/images/background-mobile.png');
