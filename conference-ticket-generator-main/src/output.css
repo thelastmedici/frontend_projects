@@ -209,6 +209,12 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .my-2 {
+    margin-block: calc(var(--spacing) * 2);
+  }
+  .my-3 {
+    margin-block: calc(var(--spacing) * 3);
+  }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
@@ -230,11 +236,17 @@
   .hidden {
     display: none;
   }
+  .h-3\.5 {
+    height: calc(var(--spacing) * 3.5);
+  }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
+  }
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-3xl {
-    width: var(--container-3xl);
+  .w-10 {
+    width: calc(var(--spacing) * 10);
   }
   .w-full {
     width: 100%;
@@ -261,17 +273,9 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-2 {
+  .border-0 {
     border-style: var(--tw-border-style);
-    border-width: 2px;
-  }
-  .border-5 {
-    border-style: var(--tw-border-style);
-    border-width: 5px;
-  }
-  .border-\[\.5\] {
-    border-style: var(--tw-border-style);
-    border-width: .5;
+    border-width: 0px;
   }
   .border-dashed {
     --tw-border-style: dashed;
@@ -280,17 +284,11 @@
   .border-gray-300 {
     border-color: var(--color-gray-300);
   }
+  .bg-\[hsl\(245\,24\%\,40\%\)\] {
+    background-color: hsl(245,24%,40%);
+  }
   .bg-\[hsl\(245\,37\%\,24\%\)\] {
     background-color: hsl(245,37%,24%);
-  }
-  .bg-\[hsl\(245_19\%_35\%\)\] {
-    background-color: hsl(245 19% 35%);
-  }
-  .bg-amber-600 {
-    background-color: var(--color-amber-600);
-  }
-  .bg-amber-950 {
-    background-color: var(--color-amber-950);
   }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
@@ -298,8 +296,26 @@
   .bg-\[url\(\'\.\.\/assets\/images\/background-mobile\.png\'\)\] {
     background-image: url('../assets/images/background-mobile.png');
   }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
   .p-2\.5 {
     padding: calc(var(--spacing) * 2.5);
+  }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
+  .p-8 {
+    padding: calc(var(--spacing) * 8);
+  }
+  .p-14 {
+    padding: calc(var(--spacing) * 14);
   }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
