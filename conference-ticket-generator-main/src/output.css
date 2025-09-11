@@ -261,6 +261,9 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
   .overflow-x-hidden {
     overflow-x: hidden;
   }
@@ -322,10 +325,6 @@
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
@@ -334,17 +333,8 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
-  .text-\[0\.5px\] {
-    font-size: 0.5px;
-  }
-  .text-\[1\.5px\] {
-    font-size: 1.5px;
-  }
-  .text-\[7\.5px\] {
-    font-size: 7.5px;
-  }
-  .text-\[10\.5px\] {
-    font-size: 10.5px;
+  .text-\[12\.5px\] {
+    font-size: 12.5px;
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
