@@ -289,6 +289,9 @@
   .border-gray-500 {
     border-color: var(--color-gray-500);
   }
+  .bg-\[hsl\(7_88\%_67\%\)\] {
+    background-color: hsl(7 88% 67%);
+  }
   .bg-\[hsl\(245\,24\%\,40\%\)\] {
     background-color: hsl(245,24%,40%);
   }
@@ -306,6 +309,9 @@
   }
   .p-2\.5 {
     padding: calc(var(--spacing) * 2.5);
+  }
+  .p-3\.5 {
+    padding: calc(var(--spacing) * 3.5);
   }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
