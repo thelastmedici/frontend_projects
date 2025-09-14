@@ -269,20 +269,6 @@
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
-  .space-x-1 {
-    :where(& > :not(:last-child)) {
-      --tw-space-x-reverse: 0;
-      margin-inline-start: calc(calc(var(--spacing) * 1) * var(--tw-space-x-reverse));
-      margin-inline-end: calc(calc(var(--spacing) * 1) * calc(1 - var(--tw-space-x-reverse)));
-    }
-  }
-  .space-x-14 {
-    :where(& > :not(:last-child)) {
-      --tw-space-x-reverse: 0;
-      margin-inline-start: calc(calc(var(--spacing) * 14) * var(--tw-space-x-reverse));
-      margin-inline-end: calc(calc(var(--spacing) * 14) * calc(1 - var(--tw-space-x-reverse)));
-    }
-  }
   .overflow-x-hidden {
     overflow-x: hidden;
   }
@@ -321,6 +307,27 @@
   }
   .bg-\[url\(\'\.\.\/assets\/images\/background-mobile\.png\'\)\] {
     background-image: url('../assets/images/background-mobile.png');
+  }
+  .bg-\[url\(\'assets\/images\/background-mobile\.png\'\)\] {
+    background-image: url('assets/images/background-mobile.png');
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .bg-size-\[2rem\] {
+    background-size: 2rem;
+  }
+  .bg-size-\[20rem\] {
+    background-size: 20rem;
+  }
+  .bg-center {
+    background-position: center;
+  }
+  .bg-left {
+    background-position: left;
+  }
+  .bg-no-repeat {
+    background-repeat: no-repeat;
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
@@ -361,19 +368,8 @@
   .text-\[10\.5px\] {
     font-size: 10.5px;
   }
-  .text-\[12\.5px\] {
-    font-size: 12.5px;
-  }
   .text-\[20px\] {
     font-size: 20px;
-  }
-  .leading-4 {
-    --tw-leading: calc(var(--spacing) * 4);
-    line-height: calc(var(--spacing) * 4);
-  }
-  .leading-10 {
-    --tw-leading: calc(var(--spacing) * 10);
-    line-height: calc(var(--spacing) * 10);
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -422,6 +418,11 @@
       --tw-ring-color: var(--color-blue-500);
     }
   }
+  .sm\:\[background-position\:-40px_center\] {
+    @media (width >= 40rem) {
+      background-position: -40px center;
+    }
+  }
   .dark\:border-gray-600 {
     @media (prefers-color-scheme: dark) {
       border-color: var(--color-gray-600);
@@ -459,19 +460,10 @@
     }
   }
 }
-@property --tw-space-x-reverse {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
-}
-@property --tw-leading {
-  syntax: "*";
-  inherits: false;
 }
 @property --tw-font-weight {
   syntax: "*";
@@ -533,9 +525,7 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-space-x-reverse: 0;
       --tw-border-style: solid;
-      --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-blur: initial;
       --tw-brightness: initial;
