@@ -31,6 +31,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-amber-200: oklch(92.4% 0.12 95.746);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-300: oklch(87.2% 0.01 258.338);
@@ -305,26 +306,11 @@
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
-  .bg-\[url\(\'\.\.\/assets\/images\/background-mobile\.png\'\)\] {
-    background-image: url('../assets/images/background-mobile.png');
-  }
-  .bg-\[url\(\'assets\/images\/background-mobile\.png\'\)\] {
-    background-image: url('assets/images/background-mobile.png');
-  }
   .bg-cover {
     background-size: cover;
   }
-  .bg-size-\[2rem\] {
-    background-size: 2rem;
-  }
-  .bg-size-\[20rem\] {
-    background-size: 20rem;
-  }
   .bg-center {
     background-position: center;
-  }
-  .bg-left {
-    background-position: left;
   }
   .bg-no-repeat {
     background-repeat: no-repeat;
@@ -418,9 +404,9 @@
       --tw-ring-color: var(--color-blue-500);
     }
   }
-  .sm\:\[background-position\:-40px_center\] {
+  .sm\:\[background-position\:-40px_calc\(50\%_-_20px\)\] {
     @media (width >= 40rem) {
-      background-position: -40px center;
+      background-position: -40px calc(50% - 20px);
     }
   }
   .dark\:border-gray-600 {
