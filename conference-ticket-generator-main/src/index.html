@@ -2,90 +2,87 @@
 <html lang="en" class="overflow-x-hidden">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./output.css">
-  
-  <title>Frontend Mentor | Conference ticket generator</title>
-
+  <title>Conference Ticket Generator</title>
 </head>
 <body 
-  class="bg-no-repeat bg-cover bg-center sm:[background-position:-40px_calc(50%_-_20px)] text-white min-h-screen overflow-x-hidden"
+  class="bg-no-repeat bg-cover bg-center text-white min-h-screen overflow-x-hidden"
   style="background-image: url('../assets/images/pattern-lines.svg'), url('../assets/images/background-mobile.png');">
 
-  <img src="../assets/images/pattern-circle.svg" alt="pattern-circle" class="absolute top-125 -right-11 w-[120px] h-[120px] pointer-events-none select-none">
-  <img src="../assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg" alt="pattern-squiggly-line-bottom-mobile-tablet" class="absolute bottom-1 left-[-20px]">
+  <!-- Decorative patterns -->
+  <img src="../assets/images/pattern-circle.svg" alt="pattern-circle" 
+       class="absolute top-130 right-0 w-[120px] h-[120px] pointer-events-none select-none">
+  <img src="../assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg" alt="pattern-squiggly" 
+       class="absolute bottom-0 left-0 pointer-events-none select-none">
 
-  
-
+  <!-- Main container -->
   <div class="relative w-full max-w-[375px] mx-auto px-6 py-8 min-h-screen flex flex-col">
    
-      <div class="mx-auto">
-        <img src="../assets/images/logo-full.svg" alt="logo-full">
-      </div>
-    <div class="flex flex-col text-center justify-center items-center">
-        <h1 class="font-Inconsolata font-bold text-2xl px-2">
-          Your Journey to Coding Conf 2025 Starts Here!
-        </h1>
-    <p class="mt-4 text-lg text-gray-50  [word-spacing:0.25rem] font-Inconsolata">
-          Secure your spot at next year's biggest coding conference.
-        </p>
+    <!-- Logo -->
+    <div class="mx-auto mb-6">
+      <img src="../assets/images/logo-full.svg" alt="logo-full">
     </div>
-      <div class="mt-8">
-        <p>Upload Avatar</p>
-        <div class="w-full my-3 p-2.5 bg-[hsl(245,37%,24%)] rounded-lg border border-gray-500 cursor-pointer border-dashed flex flex-col justify-center items-center">
-          <div class="border-0 bg-[hsl(245,24%,40%)] p-2 rounded-lg my-2">
-            <img src="../assets/images/icon-upload.svg" alt="icon-upload">
-          </div>
-          <p class="my-2 font-Inconsolata">Drag and drop or click to upload</p>
+
+    <!-- Heading -->
+    <div class="text-center">
+      <h1 class="font-Inconsolata font-bold text-2xl px-2">
+        Your Journey to Coding Conf 2025 Starts Here!
+      </h1>
+      <p class="mt-4 text-lg text-gray-50 font-Inconsolata [word-spacing:0.25rem]">
+        Secure your spot at next year's biggest coding conference.
+      </p>
+    </div>
+
+    <!-- Upload -->
+    <div class="mt-8">
+      <p>Upload Avatar</p>
+      <div class="w-full my-3 p-2.5 bg-[hsl(245,37%,24%)] rounded-lg border border-gray-500 border-dashed flex flex-col justify-center items-center">
+        <div class="bg-[hsl(245,24%,40%)] p-2 rounded-lg my-2">
+          <img src="../assets/images/icon-upload.svg" alt="icon-upload">
         </div>
-          
+        <p class="my-2 font-Inconsolata">Drag and drop or click to upload</p>
       </div>
-        <div class="flex flex-row gap-2">
-          <img src="../assets/images/icon-info.svg" alt="icon-info">
-            <p class="font-normal text-[10.5px] mt-1 [word-spacing:0.35rem]">Upload your photo (JPG or PNG, max size: 500KB).</p>
-        </div>
-      
-      <!-- Form starts -->
-        <form action="" class="mt-6 font-Inconsolata">
-            <div class="mb-6">
-                <label for="full_name" class="block mb-2 text-[20px] font-medium text-gray-900 dark:text-white">Full name</label>
-                <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3.5 dark:bg-[hsl(245,37%,24%)] dark:border-gray-600 dark:placeholder-gray-400 dark:text-bg-[hsl(245,37%,24%)] dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-            </div>
-          
-          <div class="mb-6">
-              <label for="email" class="block mb-2 text-[20px] font-medium text-gray-900 dark:text-white">Email address</label>
-              <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3.5 dark:bg-[hsl(245,37%,24%)] dark:border-gray-600 dark:placeholder-gray-400 dark:text-bg-[hsl(245,37%,24%)] dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="example@email.com" required />
-          </div> 
-          
-            <div class="mb-6">
-              <label for="github username" class="block mb-2 text-[20px] font-medium text-gray-900 dark:text-white">Github Username</label>
-              <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3.5 dark:bg-[hsl(245,37%,24%)] dark:border-gray-600 dark:placeholder-gray-400 dark:text-bg-[hsl(245,37%,24%)] dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="@yourusername" required />
-          </div> 
-          
-            <button class="bg-[hsl(7_88%_67%)] rounded-lg w-full p-3.5">
-              <p class="font-extrabold text-black text-[20px]">Generate My Ticket</p>
-            </button>
-        </form>
-    
-    <!-- Form ends -->
-    <!-- Generated tickets starts -->
-    <div class="hidden">
-    
-      <p>Congrats, <!-- Full Name -->! Your ticket is ready.</p>
-    
-      <p>We've emailed your ticket to  and will send updates in the run up to the event.</p>
-    
-      Coding Conf
-      Jan 31, 2025 / Austin, TX
     </div>
-    <!-- Generated tickets ends -->
-    
+
+    <div class="flex flex-row gap-2">
+      <img src="../assets/images/icon-info.svg" alt="icon-info">
+      <p class="text-[10.5px] mt-1 font-normal [word-spacing:0.35rem]">
+        Upload your photo (JPG or PNG, max size: 500KB).
+      </p>
     </div>
-       <div class="flex flex-col items-center">
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a><br>
-            Coded by <a href="github.com/thelastmedici.com">Christian  Joshua</a>
+
+    <!-- Form -->
+    <form class="mt-6 font-Inconsolata">
+      <div class="mb-6">
+        <label for="full_name" class="block mb-2 text-[20px] font-medium">Full name</label>
+        <input type="text" id="full_name"
+               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3.5 focus:ring-blue-500 focus:border-blue-500 dark:bg-[hsl(245,37%,24%)] dark:border-gray-600 dark:text-white" required />
+      </div>
+
+      <div class="mb-6">
+        <label for="email" class="block mb-2 text-[20px] font-medium">Email address</label>
+        <input type="email" id="email"
+               placeholder="example@email.com"
+               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3.5 focus:ring-blue-500 focus:border-blue-500 dark:bg-[hsl(245,37%,24%)] dark:border-gray-600 dark:text-white" required />
+      </div> 
+
+      <div class="mb-6">
+        <label for="github" class="block mb-2 text-[20px] font-medium">Github Username</label>
+        <input type="text" id="github"
+               placeholder="@yourusername"
+               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3.5 focus:ring-blue-500 focus:border-blue-500 dark:bg-[hsl(245,37%,24%)] dark:border-gray-600 dark:text-white" required />
+      </div> 
+
+      <button class="bg-[hsl(7_88%_67%)] rounded-lg w-full p-3.5">
+        <p class="font-extrabold text-black text-[20px]">Generate My Ticket</p>
+      </button>
+    </form>
+
+    <!-- Footer -->
+    <div class="flex flex-col items-center mt-10 text-sm">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a><br>
+      Coded by <a href="https://github.com/thelastmedici">Christian Joshua</a>
     </div>
   </div>
 </body>
