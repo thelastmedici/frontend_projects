@@ -31,6 +31,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-amber-600: oklch(66.6% 0.179 58.318);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-300: oklch(87.2% 0.01 258.338);
@@ -40,8 +41,6 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
-    --container-lg: 32rem;
-    --container-3xl: 48rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-lg: 1.125rem;
@@ -50,8 +49,6 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
-    --text-4xl: 2.25rem;
-    --text-4xl--line-height: calc(2.5 / 2.25);
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
     --font-weight-normal: 400;
@@ -59,10 +56,7 @@
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
-    --leading-tight: 1.25;
     --radius-lg: 0.5rem;
-    --default-transition-duration: 150ms;
-    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-Inconsolata: Inconsolata, monospace;
@@ -310,6 +304,9 @@
   .w-full {
     width: 100%;
   }
+  .max-w-\[375px\] {
+    max-width: 375px;
+  }
   .max-w-\[1440px\] {
     max-width: 1440px;
   }
@@ -359,6 +356,9 @@
   }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
+  }
+  .bg-\[url\(\'\.\.\/assets\/images\/pattern-lines\.svg\'\)\,url\(\'\.\.\/assets\/images\/background-mobile\.png\'\)\] {
+    background-image: url('../assets/images/pattern-lines.svg'),url('../assets/images/background-mobile.png');
   }
   .bg-cover {
     background-size: cover;
@@ -479,6 +479,41 @@
   .sm\:max-w-\[375px\] {
     @media (width >= 40rem) {
       max-width: 375px;
+    }
+  }
+  .sm\:bg-cover {
+    @media (width >= 40rem) {
+      background-size: cover;
+    }
+  }
+  .sm\:bg-center {
+    @media (width >= 40rem) {
+      background-position: center;
+    }
+  }
+  .sm\:bg-no-repeat {
+    @media (width >= 40rem) {
+      background-repeat: no-repeat;
+    }
+  }
+  .lg\:max-w-\[1440px\] {
+    @media (width >= 64rem) {
+      max-width: 1440px;
+    }
+  }
+  .lg\:bg-amber-600 {
+    @media (width >= 64rem) {
+      background-color: var(--color-amber-600);
+    }
+  }
+  .lg\:bg-\[url\(\'\.\.\/assets\/images\/pattern-lines\.svg\'\)\,url\(\'\.\.\/assets\/images\/background-desktop\.png\'\)\] {
+    @media (width >= 64rem) {
+      background-image: url('../assets/images/pattern-lines.svg'),url('../assets/images/background-desktop.png');
+    }
+  }
+  .lg\:bg-no-repeat {
+    @media (width >= 64rem) {
+      background-repeat: no-repeat;
     }
   }
   .lg\:bg-repeat {

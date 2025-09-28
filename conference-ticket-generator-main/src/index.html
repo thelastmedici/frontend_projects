@@ -7,8 +7,10 @@
   <title>Conference Ticket Generator</title>
 </head>
 <body 
-  class="bg-no-repeat bg-cover bg-center text-white min-h-screen overflow-x-hidden lg:bg-repeat"
-  style="background-image: url('../assets/images/pattern-lines.svg'), url('../assets/images/background-mobile.png');">
+  class="text-white min-h-screen overflow-x-hidden 
+         bg-no-repeat bg-cover bg-center
+         bg-[url('../assets/images/pattern-lines.svg'),url('../assets/images/background-mobile.png')]
+         lg:bg-[url('../assets/images/pattern-lines.svg'),url('../assets/images/background-desktop.png')]">
 
   <!-- Decorative patterns -->
   <img src="../assets/images/pattern-circle.svg" alt="pattern-circle" 
@@ -17,7 +19,7 @@
        class="absolute bottom-0 left-0 pointer-events-none select-none">
 
   <!-- Main container -->
-  <div class="relative w-full max-w-[1440px] lg:px-6 sm:max-w-[375px] mx-auto px-6 py-8 min-h-screen flex flex-col">
+  <div class="relative w-full lg:max-w-[1440px] lg:px-6 max-w-[375px] mx-auto px-6 py-8 min-h-screen flex flex-col">
    
     <!-- Logo -->
     <div class="mx-auto mb-6">
