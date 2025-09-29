@@ -307,9 +307,6 @@
   .max-w-\[375px\] {
     max-width: 375px;
   }
-  .max-w-\[1440px\] {
-    max-width: 1440px;
-  }
   .flex-col {
     flex-direction: column;
   }
@@ -476,24 +473,39 @@
       --tw-ring-color: var(--color-blue-500);
     }
   }
-  .sm\:max-w-\[375px\] {
-    @media (width >= 40rem) {
-      max-width: 375px;
+  .lg\:mx-10 {
+    @media (width >= 64rem) {
+      margin-inline: calc(var(--spacing) * 10);
     }
   }
-  .sm\:bg-cover {
-    @media (width >= 40rem) {
-      background-size: cover;
+  .lg\:mx-28 {
+    @media (width >= 64rem) {
+      margin-inline: calc(var(--spacing) * 28);
     }
   }
-  .sm\:bg-center {
-    @media (width >= 40rem) {
-      background-position: center;
+  .lg\:mx-32 {
+    @media (width >= 64rem) {
+      margin-inline: calc(var(--spacing) * 32);
     }
   }
-  .sm\:bg-no-repeat {
-    @media (width >= 40rem) {
-      background-repeat: no-repeat;
+  .lg\:mx-40 {
+    @media (width >= 64rem) {
+      margin-inline: calc(var(--spacing) * 40);
+    }
+  }
+  .lg\:mx-64 {
+    @media (width >= 64rem) {
+      margin-inline: calc(var(--spacing) * 64);
+    }
+  }
+  .lg\:mx-72 {
+    @media (width >= 64rem) {
+      margin-inline: calc(var(--spacing) * 72);
+    }
+  }
+  .lg\:mx-80 {
+    @media (width >= 64rem) {
+      margin-inline: calc(var(--spacing) * 80);
     }
   }
   .lg\:max-w-\[1440px\] {
@@ -501,24 +513,14 @@
       max-width: 1440px;
     }
   }
-  .lg\:bg-amber-600 {
-    @media (width >= 64rem) {
-      background-color: var(--color-amber-600);
-    }
-  }
   .lg\:bg-\[url\(\'\.\.\/assets\/images\/pattern-lines\.svg\'\)\,url\(\'\.\.\/assets\/images\/background-desktop\.png\'\)\] {
     @media (width >= 64rem) {
       background-image: url('../assets/images/pattern-lines.svg'),url('../assets/images/background-desktop.png');
     }
   }
-  .lg\:bg-no-repeat {
+  .lg\:px-2\.5 {
     @media (width >= 64rem) {
-      background-repeat: no-repeat;
-    }
-  }
-  .lg\:bg-repeat {
-    @media (width >= 64rem) {
-      background-repeat: repeat;
+      padding-inline: calc(var(--spacing) * 2.5);
     }
   }
   .lg\:px-6 {
