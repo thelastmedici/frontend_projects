@@ -477,10 +477,6 @@
     --tw-font-weight: var(--font-weight-extrabold);
     font-weight: var(--font-weight-extrabold);
   }
-  .font-medium {
-    --tw-font-weight: var(--font-weight-medium);
-    font-weight: var(--font-weight-medium);
-  }
   .font-normal {
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
@@ -574,16 +570,6 @@
   .lg\:mt-2 {
     @media (width >= 64rem) {
       margin-top: calc(var(--spacing) * 2);
-    }
-  }
-  .lg\:w-1\.5 {
-    @media (width >= 64rem) {
-      width: calc(var(--spacing) * 1.5);
-    }
-  }
-  .lg\:w-2\.5 {
-    @media (width >= 64rem) {
-      width: calc(var(--spacing) * 2.5);
     }
   }
   .lg\:w-2xs {
