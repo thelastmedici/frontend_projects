@@ -494,9 +494,79 @@
       position: absolute;
     }
   }
+  .lg\:-top-0 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * -0);
+    }
+  }
+  .lg\:-top-0\.5 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * -0.5);
+    }
+  }
+  .lg\:-top-10 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * -10);
+    }
+  }
+  .lg\:top-0 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:top-0\.5 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * 0.5);
+    }
+  }
+  .lg\:top-1 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * 1);
+    }
+  }
+  .lg\:top-2 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * 2);
+    }
+  }
+  .lg\:top-5 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * 5);
+    }
+  }
+  .lg\:top-10 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * 10);
+    }
+  }
   .lg\:top-12 {
     @media (width >= 64rem) {
       top: calc(var(--spacing) * 12);
+    }
+  }
+  .lg\:top-20 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * 20);
+    }
+  }
+  .lg\:top-40 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * 40);
+    }
+  }
+  .lg\:top-48 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * 48);
+    }
+  }
+  .lg\:top-72 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * 72);
+    }
+  }
+  .lg\:top-90 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * 90);
     }
   }
   .lg\:top-110 {
@@ -504,14 +574,9 @@
       top: calc(var(--spacing) * 110);
     }
   }
-  .lg\:right-96 {
+  .lg\:right-\[50px\] {
     @media (width >= 64rem) {
-      right: calc(var(--spacing) * 96);
-    }
-  }
-  .lg\:right-\[250px\] {
-    @media (width >= 64rem) {
-      right: 250px;
+      right: 50px;
     }
   }
   .lg\:right-\[300px\] {
@@ -524,14 +589,19 @@
       right: 520px;
     }
   }
-  .lg\:right-\[550px\] {
+  .lg\:bottom-24 {
     @media (width >= 64rem) {
-      right: 550px;
+      bottom: calc(var(--spacing) * 24);
     }
   }
-  .lg\:right-\[650px\] {
+  .lg\:bottom-72 {
     @media (width >= 64rem) {
-      right: 650px;
+      bottom: calc(var(--spacing) * 72);
+    }
+  }
+  .lg\:left-\[50px\] {
+    @media (width >= 64rem) {
+      left: 50px;
     }
   }
   .lg\:mx-auto {
