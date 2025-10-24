@@ -1,123 +1,211 @@
 <!DOCTYPE html>
 <html lang="en" class="overflow-x-hidden">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./output.css">
-  <title>Conference Ticket Generator</title>
-</head>
-<body 
-  class="text-white min-h-screen overflow-x-hidden 
-         bg-no-repeat bg-cover bg-center
-         bg-[url('../assets/images/pattern-lines.svg'),url('../assets/images/background-mobile.png')]
-         lg:bg-[url('../assets/images/pattern-lines.svg'),url('../assets/images/background-desktop.png')]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Conference Ticket Generator</title>
+  </head>
+  <body
+    class="text-white min-h-screen overflow-x-hidden 
+           bg-no-repeat bg-cover bg-center
+           bg-[url('../assets/images/background-mobile.png')] 
+           lg:bg-[url('../assets/images/pattern-lines.svg'),url('../assets/images/background-desktop.png')]"
+  >
+    <!-- Background pattern lines (mobile subtle overlay) -->
+    <img
+      src="../assets/images/pattern-lines.svg"
+      alt="pattern-lines"
+      class="absolute inset-0 w-full h-full opacity-20 pointer-events-none select-none lg:hidden"
+    />
 
-  <!-- Decorative patterns -->
-   <img src="../assets/images/pattern-circle.svg" alt="pattern-circle"
-       class="lg:absolute lg:top-110 lg:right-[520px] lg:w-[170px] lg:h-[170px] lg:pointer-events-none lg:select-none">
+    <!-- Mobile decorative circles -->
+    <img
+      src="../assets/images/pattern-circle.svg"
+      alt="pattern-circle"
+      class="absolute top-10 -left-10 w-[160px] h-[160px] opacity-40 pointer-events-none select-none lg:hidden"
+    />
+    <img
+      src="../assets/images/pattern-circle.svg"
+      alt="pattern-circle"
+      class="absolute top-[160px] -right-8 w-[140px] h-[140px] opacity-30 pointer-events-none select-none lg:hidden"
+    />
 
-   <img src="../assets/images/pattern-circle.svg" alt="pattern-circle"
-       class="lg:absolute lg:-top-10 lg:left-[50px] lg:w-[170px] lg:h-[170px] lg:pointer-events-none lg:select-none">
+    <!-- Mobile squiggly bottom -->
+    <img
+      src="../assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"
+      alt="pattern-squiggly"
+      class="absolute bottom-0 left-0 w-full pointer-events-none select-none lg:hidden"
+    />
 
+    <!-- Desktop decorative patterns -->
+    <img
+      src="../assets/images/pattern-circle.svg"
+      alt="pattern-circle"
+      class="hidden lg:block lg:absolute lg:top-110 lg:right-[520px] lg:w-[170px] lg:h-[170px] lg:pointer-events-none lg:select-none"
+    />
+    <img
+      src="../assets/images/pattern-circle.svg"
+      alt="pattern-circle"
+      class="hidden lg:block lg:absolute lg:-top-10 lg:left-[50px] lg:w-[170px] lg:h-[170px] lg:pointer-events-none lg:select-none"
+    />
+    <img
+      src="../assets/images/pattern-squiggly-line-top.svg"
+      alt="pattern-squiggly"
+      class="hidden lg:block lg:absolute lg:top-12 lg:right-[300px]"
+    />
+    <img
+      src="../assets/images/pattern-squiggly-line-bottom-desktop.svg"
+      alt="pattern-squiggly-desktop"
+      class="hidden lg:block lg:absolute lg:bottom-0"
+    />
 
-  <img src="../assets/images/pattern-squiggly-line-top.svg" alt="pattern-squiggly"
-       class="lg:absolute lg:top-12 lg:right-[300px]">
+    <!-- Main container -->
+    <div
+      class="relative w-full max-w-[375px] lg:max-w-[1440px] mx-auto px-6 py-10 min-h-screen flex flex-col items-center"
+    >
+      <!-- Logo -->
+      <div class="mx-auto mb-8">
+        <img src="../assets/images/logo-full.svg" alt="logo-full" class="mx-auto w-[140px] lg:w-auto" />
+      </div>
 
-  <img src="../assets/images/pattern-circle.svg" alt="pattern-circle" 
-       class="lg:hidden absolute top-130 right-0 w-[120px] h-[120px] pointer-events-none select-none">
-
-  <img src="../assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg" alt="pattern-squiggly" 
-       class="lg:hidden absolute bottom-0 left-0 pointer-events-none select-none">
-  
-  <img src="../assets/images/pattern-squiggly-line-bottom-desktop.svg" alt="background-mobile"
-        class="absolute bottom-0">
-
-  <!-- Main container -->
-  <div class="relative w-full lg:max-w-[1440px] lg:px-6 max-w-[375px] mx-auto px-6 py-8 min-h-screen flex flex-col">
-   
-    <!-- Logo -->
-    <div class="mx-auto mb-6">
-      <img src="../assets/images/logo-full.svg" alt="logo-full">
-    </div>
-
-    <!-- Heading -->
-    <div class="text-center">
-      <h1 class="font-Inconsolata font-bold text-2xl px-2 lg:text-5xl lg:mx-auto lg:max-w-3xl">
-        Your Journey to Coding Conf 2025 Starts Here!
-      </h1>
-      <p class="mt-4 text-lg text-gray-50 px-2.5 font-Inconsolata [word-spacing:0.25rem] lg:mt-2 lg:text-base">
-        Secure your spot at next year's biggest coding conference.
-      </p>
-    </div>
-
-    <!-- Upload + Form -->
-    <div class="mt-8 w-full lg:max-w-sm lg:mx-auto">
-      <!-- Upload -->
-      <div class="mb-6">
-        <p class="mb-2 text-sm lg:text-base">Upload Avatar</p>
-        <div class="w-full h-32 flex flex-col justify-center items-center 
-                    rounded-md border border-dashed border-gray-500 
-                    bg-[hsl(245,37%,24%)] cursor-pointer">
-          <div class="bg-[hsl(245,24%,40%)] p-2 rounded-md mb-2">
-            <img src="../assets/images/icon-upload.svg" alt="icon-upload" class="w-6 h-6" />
-          </div>
-          <p class="text-sm font-Inconsolata">Drag and drop or click to upload</p>
-        </div>
-        <p class="flex items-center mt-2 text-xs text-gray-300">
-          <img src="../assets/images/icon-info.svg" alt="icon-info" class="w-3 h-3 mr-1">
-          Upload your photo (JPG or PNG, max size: 500KB).
+      <!-- Heading -->
+      <div class="text-center">
+        <h1
+          class="font-Inconsolata font-bold text-2xl px-2 leading-tight 
+                 lg:text-5xl lg:mx-auto lg:max-w-3xl"
+        >
+          Your Journey to Coding Conf 2025 Starts Here!
+        </h1>
+        <p
+          class="mt-4 text-sm text-gray-200 px-3 font-Inconsolata 
+                 leading-relaxed lg:mt-2 lg:text-base"
+        >
+          Secure your spot at next year's biggest coding conference.
         </p>
       </div>
 
-      <!-- Form -->
-      <form class="font-Inconsolata">
-        <!-- Full Name -->
-        <div class="mb-4">
-          <label for="full_name" class="block mb-2 text-lg font-bold">Full Name</label>
-          <input type="text" id="full_name"
-                 
-                 class="w-full p-3 rounded-md bg-[hsl(245,37%,24%)] border border-gray-600 
-                        text-white focus:outline-none focus:ring-2 focus:ring-[hsl(7_88%_67%)]" required />
-        </div>
-
-        <!-- Email -->
-        <div class="mb-4">
-          <label for="full_name" class="block mb-2 text-lg font-bold">Email Address</label>
-          <input type="email" id="email"
-                 placeholder="example@email.com"
-                 class="w-full p-3 rounded-md bg-[hsl(245,37%,24%)] border border-gray-600 
-                        text-white focus:outline-none focus:ring-2 focus:ring-[hsl(7_88%_67%)]" required />
-        </div>
-
-        <!-- Github -->
+      <!-- Upload + Form -->
+      <div class="mt-10 w-full lg:max-w-sm lg:mx-auto">
+        <!-- Upload -->
         <div class="mb-6">
-          <label for="full_name" class="block mb-2 text-lg font-bold">Github Username</label>
-          <input type="text" id="github"
-                 placeholder="@yourusername"
-                 class="w-full p-3 rounded-md bg-[hsl(245,37%,24%)] border border-gray-600 
-                        text-white focus:outline-none focus:ring-2 focus:ring-[hsl(7_88%_67%)]" required />
+          <p class="mb-2 text-sm lg:text-base">Upload Avatar</p>
+          <div
+            class="w-full h-32 flex flex-col justify-center items-center 
+                   rounded-md border border-dashed border-gray-500 
+                   bg-[hsl(245,37%,24%)] cursor-pointer"
+          >
+            <div class="bg-[hsl(245,24%,40%)] p-2 rounded-md mb-2">
+              <img
+                src="../assets/images/icon-upload.svg"
+                alt="icon-upload"
+                class="w-6 h-6"
+              />
+            </div>
+            <p class="text-sm font-Inconsolata">Drag and drop or click to upload</p>
+          </div>
+          <p class="flex items-center mt-2 text-xs text-gray-300">
+            <img
+              src="../assets/images/icon-info.svg"
+              alt="icon-info"
+              class="w-3 h-3 mr-1"
+            />
+            Upload your photo (JPG or PNG, max size: 500KB).
+          </p>
         </div>
 
-        <!-- Button -->
-        <button class="w-full py-3 bg-[hsl(7_88%_67%)] rounded-md font-bold text-black text-lg 
-                       hover:bg-[hsl(7_88%_60%)] transition-colors">
-          Generate My Ticket
-        </button>
-      </form>
-    </div>
+        <!-- Form -->
+        <form class="font-Inconsolata">
+          <!-- Full Name -->
+          <div class="mb-4">
+            <label
+              for="full_name"
+              class="block mb-2 text-lg font-bold"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              id="full_name"
+              class="w-full p-3 rounded-md bg-[hsl(245,37%,24%)] border border-gray-600 
+                     text-white focus:outline-none focus:ring-2 focus:ring-[hsl(7_88%_67%)]"
+              required
+            />
+          </div>
 
-    <!-- Hidden Ticket Section -->
-    <div id="ticketGenerated" class="hidden mt-8 p-6 bg-[hsl(245,37%,24%)] rounded-lg text-center">
-        <p class="text-xl font-bold mb-2">🎉 Congrats, <span id="ticketName"></span>! Your ticket is ready.</p>
-        <p class="text-sm mb-4">We've emailed your ticket to <span id="ticketEmail"></span> and will send updates in the run-up to the event.</p>
+          <!-- Email -->
+          <div class="mb-4">
+            <label
+              for="email"
+              class="block mb-2 text-lg font-bold"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              id="email"
+              placeholder="example@email.com"
+              class="w-full p-3 rounded-md bg-[hsl(245,37%,24%)] border border-gray-600 
+                     text-white focus:outline-none focus:ring-2 focus:ring-[hsl(7_88%_67%)]"
+              required
+            />
+          </div>
+
+          <!-- Github -->
+          <div class="mb-6">
+            <label
+              for="github"
+              class="block mb-2 text-lg font-bold"
+              >GitHub Username</label
+            >
+            <input
+              type="text"
+              id="github"
+              placeholder="@yourusername"
+              class="w-full p-3 rounded-md bg-[hsl(245,37%,24%)] border border-gray-600 
+                     text-white focus:outline-none focus:ring-2 focus:ring-[hsl(7_88%_67%)]"
+              required
+            />
+          </div>
+
+          <!-- Button -->
+          <button
+            class="w-full py-3 bg-[hsl(7_88%_67%)] rounded-md font-bold text-black text-lg 
+                   hover:bg-[hsl(7_88%_60%)] transition-colors"
+          >
+            Generate My Ticket
+          </button>
+        </form>
+      </div>
+
+      <!-- Hidden Ticket Section -->
+      <div
+        id="ticketGenerated"
+        class="hidden mt-8 p-6 bg-[hsl(245,37%,24%)] rounded-lg text-center"
+      >
+        <p class="text-xl font-bold mb-2">
+          🎉 Congrats, <span id="ticketName"></span>! Your ticket is ready.
+        </p>
+        <p class="text-sm mb-4">
+          We've emailed your ticket to <span id="ticketEmail"></span> and will
+          send updates in the run-up to the event.
+        </p>
         <p class="font-semibold">Coding Conf</p>
-    </div>
+      </div>
 
-    <!-- Footer -->
-    <div class="flex flex-col items-center mt-10 text-sm">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a><br>
-      Coded by <a href="https://github.com/thelastmedici">Christian&Joshua</a>
+      <!-- Footer -->
+      <div class="flex flex-col items-center mt-10 text-xs text-gray-400">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          class="underline hover:text-white"
+          >Frontend Mentor</a
+        ><br />
+        Coded by
+        <a
+          href="https://github.com/thelastmedici"
+          class="underline hover:text-white"
+          >Christian & Joshua</a
+        >
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
